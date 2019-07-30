@@ -1,0 +1,11 @@
+# basic options
+title: Yu Bin's Data Science Blog
+author: Yu Bin
+email: yubin.nus@gmail.com
+description: One step at at time
+github_username:  yubin627
+linkedin_username: yubin627
+
+# Build settings
+markdown: kramdown
+theme: minima
