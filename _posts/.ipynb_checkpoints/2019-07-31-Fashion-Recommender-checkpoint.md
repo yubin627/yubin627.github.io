@@ -12,9 +12,10 @@ author: yubin
 externalLink: false
 ---
 See the [codes](https://github.com/yubin627/ga_projects)
+See the [app](https://deepfashion-finder.herokuapp.com/)
 
 
-When it comes to what to wear, I often seek inspiration from what is around me - it could be from Instagram photos or some random passers-by I spotted on the street. For an avid online (almost exclusively) shopper like me, I would start browsing immediately on the websites, but it has been quite a challenge for me to find the exact words to describe the items accurately and to type in the search bar. 
+When it comes to what to wear, I often seek inspiration from what is around me - it could be from Instagram photos or some passers-by I spotted on the street. For an avid online (almost exclusively) shopper like me, I would start browsing immediately on the websites, but it has been quite a challenge for me to find the exact words to describe the items accurately and to type in the search bar. 
 
 Image search engine is an answer to my problem. In reality it actually has already been a default product feature for most of the major e-commerce sites these days. As a beginner in deep learnnig myself, I am very intrigued to get some hands-on and better understanding of the algorithms under the hood. 
 
@@ -33,7 +34,7 @@ Following this workflow, there are a few points to consider:
 - How to extract the feature vectors (or embeddings) to capture most of the information contained in the images?
 - Given a large dataset (130k images in this project), what is the optimal algorithm for image retrieval?
 
-## Preparation Work
+## Set-Up
 ### Dataset
 
 I used the [DeepFashion Attribute Prediction Dataset](http://mmlab.ie.cuhk.edu.hk/projects/DeepFashion.html) that has been meticulously gathered and labeled by the The Multimedia Laboratory at the Chinese University of Hong Kong. 
@@ -72,7 +73,7 @@ on floydhub's pytorch docker image
 
 ## Model Training
 
-### Prepare dataloader
+### Preparing dataloader
 PyTorch DataLoaders are objects that act as Python generators. They supply data in chunks or batches while training and validation. We can instantiate DataLoader objects and pass our datasets to them. DataLoaders store the dataset objects internally.
 
 When the application asks for the next batch of data, a DataLoader uses its stored dataset as a Python iterator to get the next element (row or image in our case) of data. Then it aggregates a batch worth of data and returns it to the application.
@@ -192,6 +193,33 @@ class Fashion_attr_prediction(data.Dataset):
 </details>
 Here I created a class to prepare the dataset object. There are various options (self.type) created to cater for the needs of training and feature extraction later. To be more specific, `train/test` data will be used for training the model; `all` will be used for feature extraction, `triplet` will be used to generate triplet margin loss function for the backpropagation. More on loss function later.
 
+### Preprocessing and Transforming the Dataset
+One more step before we move on to defining our network and start training - we need to preprocess our datasets. Specifically, this incluces Resizing, Data Augmentation, Conversion to PyTorch Tensors and Normalizing. 
+
+<details>
+<summary>
+<i>proprocessing</i>
+</summary>
+<p>{% highlight python %}
+data_transform_train = transforms.Compose([
+    transforms.Resize(IMG_SIZE), #224*224
+    transforms.RandomResizedCrop(CROP_SIZE),  #224
+    transforms.RandomHorizontalFlip(),
+    transforms.ToTensor(),
+    transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225]) #ImageNet's mean/std parameters
+    ])
+
+data_transform_test = transforms.Compose([
+    transforms.Resize(CROP_SIZE),
+    transforms.CenterCrop(CROP_SIZE),
+    transforms.ToTensor(),
+    transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])
+    ])
+
+{% endhighlight %} 
+</p>
+</details>
+
 Now we can instantiate the class to create the data loader objects as shown in the snippets below.
 <details>
 <summary>
@@ -220,32 +248,86 @@ triplet_loader = torch.utils.data.DataLoader(
 
 ### Modeling with Transfer Learning
 
-Here I selected ResNet50 and ResNeXt50 as my base architectures to train the models. Why ResNet50 in particular? 
-What does ResNet do in particular?
+Here I used [ResNet-50](https://arxiv.org/abs/1512.03385) pretrained on ImageNet dataset as my base architectures due to its proved benchmark performance in accuracy and training time (see [Stanford University's DAWNBench](https://dawn.cs.stanford.edu/benchmark/)). I also had an attempt on [ResNeXt-50](https://arxiv.org/abs/1611.05431) due to its reportedly [higher accuracy](https://github.com/facebookresearch/ResNeXt) but at the point of writing the speed to comparable accuracy is not on par with ResNet-50 on my current settings. It might require further tuning.
 
-codes:
+With transfer learning, I froze the architecture and weights from all the layers up till the last two - pooling and fully connected (FC) layers and fine tuned these two. This way I don't need to train the whole CNN from scrach (which is also not necessary since ImageNet that the model is pretrained on is quite versatile - it covers >1M images spanning 1000 categories). Here is a great visualization showing the building blocks of [ResNet-50 architecture](http://ethereon.github.io/netscope/#/gist/db945b393d40bfa26006). 
 
-- main module, pooling module, color module
+Instead of outputing to a 1000-d FC layer, I took the output of pooling layer to 2 FC layers in sequence, with the first one being a 512-d vector for feature extraction purpose later on, and the second being a 20-d vector for image classification (recall that I am only using 20 categories in the dataset).
+
+The weights of the last two layers are trained using a combination of [Cross Entropy](https://ml-cheatsheet.readthedocs.io/en/latest/loss_functions.html) and [Triplet Margin Loss](https://www.coursera.org/lecture/convolutional-neural-networks/triplet-loss-HuUtN?utm_source=linkshare&siteID=je6NUbpObpQ-v1d8hWFJabwDXRzs0wbHQg&ranEAID=je6NUbpObpQ&utm_content=10&ranMID=40328&ranSiteID=je6NUbpObpQ-v1d8hWFJabwDXRzs0wbHQg&utm_campaign=je6NUbpObpQ&utm_medium=partners) function and Stochastic Gradient Descent optimizer. 
+
+See below for the snippet of the codes on the model adjustment:
+<details>
+<summary>
+<i>model with last two layers unfreezed</i>
+</summary>
+<p>{% highlight python %}
+    
+# Refer to config.py file for the settings on INTER_DIM, CATEGORIES, learning rate and momentum
+class f_model(nn.Module):
+    '''
+    input: N * 3 * 224 * 224
+    output: N * num_classes (20), N * inter_dim (512), N * C' (2048) * 7 * 7
+    '''
+    def __init__(self, freeze_param=True, inter_dim=INTER_DIM, num_classes=CATEGORIES, model_path=None):
+        super(f_model, self).__init__()
+        self.backbone = models.resnext50_32x4d(pretrained=True)
+        state_dict = self.backbone.state_dict()
+        num_features = self.backbone.fc.in_features
+        self.backbone = nn.Sequential(*list(self.backbone.children())[:-2])
+        model_dict = self.backbone.state_dict()
+        model_dict.update({k: v for k, v in state_dict.items() if k in model_dict})
+        self.backbone.load_state_dict(model_dict)
+        if freeze_param:
+            for param in self.backbone.parameters():
+                param.requires_grad = False
+
+        self.avg_pooling = nn.AvgPool2d(7, stride=1)
+        self.fc = nn.Linear(num_features, inter_dim)
+        self.fc2 = nn.Linear(inter_dim, num_classes)
+        state = load_model(model_path)
+        if state:
+            new_state = self.state_dict()
+            new_state.update({k: v for k, v in state.items() if k in new_state})
+            self.load_state_dict(new_state)
+
+    def forward(self, x):
+        x = self.backbone(x)
+        pooled = self.avg_pooling(x)
+        inter_out = self.fc(pooled.view(pooled.size(0), -1))
+        out = self.fc2(inter_out)
+        return out, inter_out, x
+    
+model = f_model(freeze_param=FREEZE_PARAM, model_path=DUMPED_MODEL).cuda()
+optimizer = optim.SGD(filter(lambda p: p.requires_grad, model.parameters()), lr=LR, momentum=MOMENTUM)
+{% endhighlight %} 
+</p>
+</details>
+
+#### Results
+
+Plot for training/test accuracy on ResNet-50 and ResNeXt-50
+![alt-text-1](/assets/images/resnet.png "resnet") ![alt-text-2](/assets/images/resnext.png "resnext")
 
 
+Plot for training/test accuracy on ResNeXt-50
 
-Notes:
-https://www.datascience.com/blog/transfer-learning-in-pytorch-part-two
-Each model can be considered as composed of two parts:
+## Feature Extraction
 
-The convolutional neural network backbone (a CNN architecture with several blocks comprising of convolutions with varying number of filters, non-linearities, max or average pooling layers, batch normalizations, dropout layers, etc.)
-A head with a fully connected classifier at the output end
+## Image Retrieval
 
-In most cases, the output layer does not have any fully connected hidden layers. However, we have the option to replace the classifier layer with our own, and add more hidden layers by replacing the output layer with our own. We may easily use our own FC class (defined in Part 1 of this tutorial) for this purpose. 
+## Deploying the model on a web interface
+
+---
+## Additional Notes 
+FastAi
+- easy tool to find LR and Momentum
+
+GitHub link
+
+## Future Work
 
 
-
-DataLoaders
-PyTorch DataLoaders are objects that act as Python generators. They supply data in chunks or batches while training and validation. We can instantiate DataLoader objects and pass our datasets to them. DataLoaders store the dataset objects internally.
-
-When the application asks for the next batch of data, a DataLoader uses its stored dataset as a Python iterator to get the next element (row or image in our case) of data. Then it aggregates a batch worth of data and returns it to the application.
-
-The following is an example of calling the DataLoader constructor:
 
 
 
