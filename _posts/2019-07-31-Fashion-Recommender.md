@@ -12,7 +12,8 @@ author: yubin
 externalLink: false
 ---
 See the [codes](https://github.com/yubin627/ga_projects)
-See the [app](https://deepfashion-finder.herokuapp.com/)
+
+Check out the [app](https://deepfashion-finder.herokuapp.com/)
 
 
 When it comes to what to wear, I often seek inspiration from what is around me - it could be from Instagram photos or some passers-by I spotted on the street. For an avid online (almost exclusively) shopper like me, I would start browsing immediately on the websites, but it has been quite a challenge for me to find the exact words to describe the items accurately and to type in the search bar. 
@@ -23,7 +24,7 @@ Image search engine is an answer to my problem. In reality it actually has alrea
 ## Goal
 
 My goal would be to build a search engine based on image similarity-based recommendations. 
-Essentially the workflow is divided into three steps:
+Essentially the workflow consists of three steps:
 1. Modeling
 2. Feature extraction
 3. Image retrieval
@@ -62,13 +63,9 @@ As shown below is the data folder structure.
 ### Hardware & Environment
 
 I trained the model on floydhub for its easy set-up. The configuration is as follows:
-
-| Instance 	| CPU Core 	| Memory 	| GPU Type          	| GPU Memory 	|
-|----------	|----------	|--------	|-------------------	|------------	|
-| GPU      	| 4        	| 64GB   	| Nvidia Tesla K-80 	| 12GB       	|
-
-- torch==1.1
-- torchvision==0.3
+`[GPU instance](https://docs.floydhub.com/guides/pytorch/#pytorch-10)`
+`torch==1.1`
+`torchvision==0.3`
 on floydhub's pytorch docker image
 
 ## Model Training
@@ -82,7 +79,7 @@ The following is a snippet of the codes that I used to create the training datas
 
 <details>
 <summary>
-<i>dataloader class to prepare train/test/all datasets</i>
+<i>dataset class to prepare train/test/all set</i>
 </summary>
 <p>{% highlight python %}
 class Fashion_attr_prediction(data.Dataset):
@@ -198,7 +195,7 @@ One more step before we move on to defining our network and start training - we 
 
 <details>
 <summary>
-<i>proprocessing</i>
+<i>preprocessing</i>
 </summary>
 <p>{% highlight python %}
 data_transform_train = transforms.Compose([
@@ -248,7 +245,7 @@ triplet_loader = torch.utils.data.DataLoader(
 
 ### Modeling with Transfer Learning
 
-Here I used [ResNet-50](https://arxiv.org/abs/1512.03385) pretrained on ImageNet dataset as my base architectures due to its proved benchmark performance in accuracy and training time (see [Stanford University's DAWNBench](https://dawn.cs.stanford.edu/benchmark/)). I also had an attempt on [ResNeXt-50](https://arxiv.org/abs/1611.05431) due to its reportedly [higher accuracy](https://github.com/facebookresearch/ResNeXt) but at the point of writing the speed to comparable accuracy is not on par with ResNet-50 on my current settings. It might require further tuning.
+Here I used [ResNet-50](https://arxiv.org/abs/1512.03385) pretrained on ImageNet dataset as my base architectures due to its proved benchmark performance in accuracy and training time (see [Stanford University's DAWNBench](https://dawn.cs.stanford.edu/benchmark/)). I also had an attempt on [ResNeXt-50](https://arxiv.org/abs/1611.05431) due to its reportedly [higher accuracy](https://github.com/facebookresearch/ResNeXt) but at the point of writing the training speed to comparable accuracy is much slower than (~0.6x) ResNet-50 on my current hardware. As future work, I will play with fine-tuning of the ResNeXt version.
 
 With transfer learning, I froze the architecture and weights from all the layers up till the last two - pooling and fully connected (FC) layers and fine tuned these two. This way I don't need to train the whole CNN from scrach (which is also not necessary since ImageNet that the model is pretrained on is quite versatile - it covers >1M images spanning 1000 categories). Here is a great visualization showing the building blocks of [ResNet-50 architecture](http://ethereon.github.io/netscope/#/gist/db945b393d40bfa26006). 
 
@@ -259,7 +256,7 @@ The weights of the last two layers are trained using a combination of [Cross Ent
 See below for the snippet of the codes on the model adjustment:
 <details>
 <summary>
-<i>model with last two layers unfreezed</i>
+<i>model constructor used for transfer learning</i>
 </summary>
 <p>{% highlight python %}
     
@@ -309,21 +306,160 @@ optimizer = optim.SGD(filter(lambda p: p.requires_grad, model.parameters()), lr=
 Plot for training/test accuracy on ResNet-50 and ResNeXt-50
 ![alt-text-1](/assets/images/resnet.png "resnet") ![alt-text-2](/assets/images/resnext.png "resnext")
 
-
-Plot for training/test accuracy on ResNeXt-50
+The train/test accuracy (top-1) reached 59%/68% for the ResNet-50 model. On ResNeXt-50, I stopped it at the 5th epoch as no further improvement is seen.
 
 ## Feature Extraction
 
+I used the output of the second last fully connected layer as the embeddings, which are vectors of dimension (512, 1). 
+
+See codes below for the feature extraction.
+<details>
+<summary>
+<i>feature extractor</i>
+</summary>
+<p>{% highlight python %}
+class FeatureExtractor(nn.Module):
+    def __init__(self, deep_module, color_module, pooling_module):
+        super(FeatureExtractor, self).__init__()
+        self.deep_module = deep_module
+        self.deep_module.eval()
+
+    def forward(self, x):
+        cls, feat, conv_out = self.deep_module(x)
+        return feat.cpu().data.numpy()
+
+main_model = f_model(model_path=DUMPED_MODEL).cuda()   
+extractor = FeatureExtractor(main_model)
+all_loader = torch.utils.data.DataLoader(
+        Fashion_attr_prediction(type="all", transform=data_transform_test),
+        batch_size=EXTRACT_BATCH_SIZE, num_workers=NUM_WORKERS, pin_memory=True)
+
+def dump_dataset(loader, deep_feats, labels):
+    for batch_idx, (data, data_path) in enumerate(loader):
+        data = Variable(data).cuda()
+        deep_feat = extractor(data)
+        for i in range(len(data_path)):
+            path = data_path[i]
+            feature_n = deep_feat[i].squeeze()
+            deep_feats.append(feature_n)
+            labels.append(path)
+
+        if batch_idx % LOG_INTERVAL == 0:
+            print("{} / {}".format(batch_idx * EXTRACT_BATCH_SIZE, len(loader.dataset)))
+    
+        feat_all = '/output/all_feat_pca.npy'
+        feat_list = '/output/all_feat.list'
+        with open(feat_list, "w") as fw:
+            fw.write("\n".join(labels))
+        np.save(feat_all, np.vstack(deep_feats_reduced))
+        print("Dumped to all_feat.npy and all_feat.list.")  
+
+deep_feats = []
+labels = []
+dump_dataset(all_loader, deep_feats, labels)
+{% endhighlight %} 
+</p>
+</details>
+
 ## Image Retrieval
+Now with the feature vector of all images available, it's time to build a search function(s) to get similar images given an image input. I tried three approaches and compared the time taken in each method.
+The methods included:
+- a naive approach that computes the similarity score between the given image to every other image in the dataset and get the top-n images.
+<details>
+<summary>
+<i>naive query</i>
+</summary>
+<p>{% highlight python %}
+def dump_single_feature(img_path):
+    deep_feats, labels = load_feat_db()
+    
+    deep_feats = np.array(deep_feats)
+    labels = np.array(labels)
+    deep_feat = deep_feats[labels == img_path][0,:]
+
+    return deep_feat
+    
+def get_similarity(feature, feats, metric='cosine'):
+    dist = cdist(np.expand_dims(feature, axis=0), feats, metric)[0]
+    return dist  
+
+def get_top_n(dist, labels, retrieval_top_n):
+    ind = np.argpartition(dist, retrieval_top_n)[0:retrieval_top_n]
+    ret = list(zip([labels[i] for i in ind], dist[ind]))
+    ret = sorted(ret, key=lambda x: x[1], reverse=False)
+    print(ret)
+    return ret
+    
+def get_deep_top_n(features, deep_feats, labels, retrieval_top_n=5):
+    deep_scores = get_similarity(features, deep_feats, DISTANCE_METRIC[0])
+    results = get_top_n(deep_scores, labels, retrieval_top_n)
+    return results
+    
+def naive_query(features, deep_feats, labels, retrieval_top_n=5):
+    results = get_deep_color_top_n(features, deep_feats, labels, retrieval_top_n)
+    return results
+{% endhighlight %} 
+</p>
+</details>  
+- a K-Means approach that added an intermediate step to classify the images to a number of clusters (50 in my case) in the features space. The query would firstly look for the cluster, followed by similarity search within the cluster. 
+<details>
+<summary>
+<i>K-Means query</i>
+</summary>
+<p>{% highlight python %}
+feats, labels = load_feat_db()
+model = KMeans(n_clusters=N_CLUSTERS, random_state=0, n_jobs=-1).fit(feats)
+
+def kmeans_query(clf, features, deep_feats, labels, retrieval_top_n=5):
+    label = clf.predict(features[0].reshape(1, features[0].shape[0]))
+    ind = np.where(clf.labels_ == label)
+    d_feats = deep_feats[ind]
+    n_labels = list(np.array(labels)[ind])
+    results = get_deep_top_n(features, d_feats, n_labels, retrieval_top_n)
+    return results
+</p>
+</details>
+- a PCA (Principal Component Analysis) that reduced dimensionality of the feature vectors. It appears that we could reduce the features from 512 to 30 to explain at least 90% of the variance.
+<details>
+<summary>
+<i>dataloader class to prepare train/test/all datasets</i>
+</summary>
+<p>{% highlight python %}
+# Reduce dimensionality on deep features
+scaler = MinMaxScaler(feature_range=[-1, 1])
+feats_rescaled = scaler.fit_transform(feats)
+pca = PCA(n_components=30)
+feats_reduced = pca.fit_transform(feats_rescaled)
+
+with open(feat_list, "w") as fw:
+    fw.write("\n".join(labels))
+np.save(feat_all, np.vstack(feats_reduced))
+{% endhighlight %} 
+#followed by naive query algorithm
+</p>
+</details>
+
+Comparing the retrieval time taken by these three approaches, PCA achieved the fastest place. It also eases the burden on server from database loading, as the features data file is reduced from 286MB to 34MB
+![alt-text-1](/assets/images/retrieval-time.png "retrieval")
+Therefore 
 
 ## Deploying the model on a web interface
 
+I built a simple [web application](https://deepfashion-finder.herokuapp.com/) based on the search engine generated above. The front page looks like this:
+![alt-text-1](/assets/images/deepfashion-home.png "app homepage")
+The app would firstly picks one image from the upper wear dataset (139,709 images) from DeepFashion. You can refresh the page till you see an image that you like, and click the image to check out the results. 
+Have fun!
+
+See codes to the flask deployment.
+
 ---
 ## Additional Notes 
-FastAi
-- easy tool to find LR and Momentum
 
-GitHub link
+### Features
+Color features 
+
+### Libraries
+FastAi is a fantastic wrapper on PyTorch that simplifies the code dramatically. It also provides lots of function that makes model fine-tuning so much easier. Here is a notebook that I attempted on ResNet-30 and ResNet-50 using the same dataset on FastAi.
 
 ## Future Work
 
