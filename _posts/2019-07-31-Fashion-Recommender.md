@@ -423,24 +423,6 @@ def kmeans_query(clf, features, deep_feats, labels, retrieval_top_n=5):
 
 - a PCA (Principal Component Analysis) that reduced dimensionality of the feature vectors. It appears that we could reduce the features from 512 to 30 to explain at least 90% of the variance.
 
-<details>
-<summary>
-<i>PCA on feature vectors</i>
-</summary>
-<p>{% highlight python %}
-# Reduce dimensionality on deep features
-scaler = MinMaxScaler(feature_range=[-1, 1])
-feats_rescaled = scaler.fit_transform(feats)
-pca = PCA(n_components=30)
-feats_reduced = pca.fit_transform(feats_rescaled)
-
-with open(feat_list, "w") as fw:
-    fw.write("\n".join(labels))
-np.save(feat_all, np.vstack(feats_reduced))
-#followed by naive query algorithm
-{% endhighlight %} 
-</p>
-</details>
 
 Comparing the retrieval time taken by these three approaches, PCA achieved the fastest place. It also eases the burden on server from database loading, as the features data file is reduced from 286MB to 34MB
 ![alt-text-1](/assets/images/retrieval-time.png "retrieval")
