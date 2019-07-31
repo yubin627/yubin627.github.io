@@ -434,8 +434,8 @@ feats_reduced = pca.fit_transform(feats_rescaled)
 with open(feat_list, "w") as fw:
     fw.write("\n".join(labels))
 np.save(feat_all, np.vstack(feats_reduced))
-{% endhighlight %} 
 #followed by naive query algorithm
+{% endhighlight %} 
 </p>
 </details>
 
