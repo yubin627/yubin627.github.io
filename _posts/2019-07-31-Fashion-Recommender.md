@@ -402,6 +402,7 @@ def naive_query(features, deep_feats, labels, retrieval_top_n=5):
 </p>
 </details>  
 - a K-Means approach that added an intermediate step to classify the images to a number of clusters (50 in my case) in the features space. The query would firstly look for the cluster, followed by similarity search within the cluster. 
+
 <details>
 <summary>
 <i>K-Means query</i>
@@ -419,10 +420,12 @@ def kmeans_query(clf, features, deep_feats, labels, retrieval_top_n=5):
     return results
 </p>
 </details>
+
 - a PCA (Principal Component Analysis) that reduced dimensionality of the feature vectors. It appears that we could reduce the features from 512 to 30 to explain at least 90% of the variance.
+
 <details>
 <summary>
-<i>dataloader class to prepare train/test/all datasets</i>
+<i>PCA on feature vectors</i>
 </summary>
 <p>{% highlight python %}
 # Reduce dimensionality on deep features
