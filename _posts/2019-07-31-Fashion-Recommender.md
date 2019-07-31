@@ -11,10 +11,10 @@ category: project
 author: yubin
 externalLink: false
 ---
-See codes - [Link](https://github.com/yubin627/ga_projects). 
----
+See the [codes](https://github.com/yubin627/ga_projects)
 
-When it comes to what to wear, I often seek inspiration from what is around me - it could be from Instagram photos or some random passers-by I spot on the street. For an avid online (almost exclusively) shopper like me, I would start browsing immediately on the websites for similar items, but it has been quite a challenge for me to find correct words to put in the search bar to describe the items accurately. 
+
+When it comes to what to wear, I often seek inspiration from what is around me - it could be from Instagram photos or some random passers-by I spotted on the street. For an avid online (almost exclusively) shopper like me, I would start browsing immediately on the websites, but it has been quite a challenge for me to find the exact words to describe the items accurately and to type in the search bar. 
 
 Image search engine is an answer to my problem. In reality it actually has already been a default product feature for most of the major e-commerce sites these days. As a beginner in deep learnnig myself, I am very intrigued to get some hands-on and better understanding of the algorithms under the hood. 
 
@@ -27,16 +27,11 @@ Essentially the workflow is divided into three steps:
 2. Feature extraction
 3. Image retrieval
 
-During each step there are a few points to consider:
-1. Modeling
+Following this workflow, there are a few points to consider:
 - Can simple CNN handle this task? (TBC)
 - If not, which pre-trained model works the best, in terms of accuracy and training time? 
-
-2. Feature extraction
-- How to extract feature vectors to capture most of the information contained in the images?
-
-3. Image retrieval
-- Given a large dataset (130k images in my project), what is the optimal algorithm for image retrieval?
+- How to extract the feature vectors (or embeddings) to capture most of the information contained in the images?
+- Given a large dataset (130k images in this project), what is the optimal algorithm for image retrieval?
 
 ## Preparation Work
 ### Dataset
@@ -67,12 +62,12 @@ As shown below is the data folder structure.
 
 I trained the model on floydhub for its easy set-up. The configuration is as follows:
 
-| Instance | CPU Core | Memory | GPU Type          | GPU Memory |
-|----------|----------|--------|-------------------|------------|
-| GPU      | 4        | 64GB   | Nvidia Tesla K-80 | 12GB       |
+| Instance 	| CPU Core 	| Memory 	| GPU Type          	| GPU Memory 	|
+|----------	|----------	|--------	|-------------------	|------------	|
+| GPU      	| 4        	| 64GB   	| Nvidia Tesla K-80 	| 12GB       	|
 
-torch==1.1
-torchvision==0.3
+- torch==1.1
+- torchvision==0.3
 on floydhub's pytorch docker image
 
 ## Model Training
@@ -82,11 +77,11 @@ PyTorch DataLoaders are objects that act as Python generators. They supply data 
 
 When the application asks for the next batch of data, a DataLoader uses its stored dataset as a Python iterator to get the next element (row or image in our case) of data. Then it aggregates a batch worth of data and returns it to the application.
 
-The following is a snippet of the codes that I used to create the training dataset:
+The following is a snippet of the codes that I used to create the training dataset (click the triangle to expand):
 
 <details>
 <summary>
-<i>dataloader object</i>
+<i>dataloader class to prepare train/test/all datasets</i>
 </summary>
 <p>{% highlight python %}
 class Fashion_attr_prediction(data.Dataset):
@@ -94,11 +89,8 @@ class Fashion_attr_prediction(data.Dataset):
         self.transform = transform
         self.target_transform = target_transform
         self.crop = crop
-        # type_all = ["train", "test", "all", "triplet", "single"]
+        # type_all = ["train", "test", "all", "triplet"]
         self.type = type
-        if type == "single":
-            self.img_path = img_path
-            return
         self.train_list = []
         self.train_dict = {i: [] for i in range(CATEGORIES)}
         self.test_list = []
@@ -180,13 +172,6 @@ class Fashion_attr_prediction(data.Dataset):
                 img_n = self.transform(img_n)
             return img, img_p, img_n
 
-        if self.type == "single":
-            img_path = self.img_path
-            img = self.read_crop(img_path)
-            if self.transform is not None:
-                img = self.transform(img)
-            return img
-
         if self.type == "all":
             img_path = self.all_list[index]
         elif self.type == "train":
@@ -205,6 +190,70 @@ class Fashion_attr_prediction(data.Dataset):
 {% endhighlight %} 
 </p>
 </details>
+Here I created a class to prepare the dataset object. There are various options (self.type) created to cater for the needs of training and feature extraction later. To be more specific, `train/test` data will be used for training the model; `all` will be used for feature extraction, `triplet` will be used to generate triplet margin loss function for the backpropagation. More on loss function later.
+
+### Preprocessing and Transforming the Dataset
+One more step before we move on to defining our network and start training - we need to preprocess our datasets. Specifically, this incluces Resizing, Data Augmentation, Conversion to PyTorch Tensors and Normalizing. 
+
+<details>
+<summary>
+<i>proprocessing</i>
+</summary>
+<p>{% highlight python %}
+data_transform_train = transforms.Compose([
+    transforms.Resize(IMG_SIZE), #224*224
+    transforms.RandomResizedCrop(CROP_SIZE),  #224
+    transforms.RandomHorizontalFlip(),
+    transforms.ToTensor(),
+    transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225]) #ImageNet's mean/std parameters
+    ])
+
+data_transform_test = transforms.Compose([
+    transforms.Resize(CROP_SIZE),
+    transforms.CenterCrop(CROP_SIZE),
+    transforms.ToTensor(),
+    transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])
+    ])
+
+{% endhighlight %} 
+</p>
+</details>
+
+Now we can instantiate the class to create the data loader objects as shown in the snippets below.
+<details>
+<summary>
+<i>dataloader objects</i>
+</summary>
+<p>{% highlight python %}
+#Refer to config.py for the settings on batch size and number of workers
+train_loader = torch.utils.data.DataLoader(
+    Fashion_attr_prediction(type="train", transform=data_transform_train),
+    batch_size=TRAIN_BATCH_SIZE, num_workers=NUM_WORKERS, pin_memory=True
+)
+
+test_loader = torch.utils.data.DataLoader(
+    Fashion_attr_prediction(type="test", transform=data_transform_test),
+    batch_size=TEST_BATCH_SIZE, num_workers=NUM_WORKERS, pin_memory=True
+)
+
+# For calculating triplet margin loss    
+triplet_loader = torch.utils.data.DataLoader(
+    Fashion_attr_prediction(type="triplet", transform=data_transform_train),
+    batch_size=TRIPLET_BATCH_SIZE, num_workers=NUM_WORKERS, pin_memory=True
+)
+{% endhighlight %} 
+</p>
+</details>
+
+### Modeling with Transfer Learning
+
+Here I selected [ResNet-50](https://arxiv.org/abs/1512.03385) pretrained on ImageNet dataset as my base architectures due to its proved benchmark performance in accuracy and training time (see [Stanford University's DAWNBench](https://dawn.cs.stanford.edu/benchmark/)). I also had an attempt on [ResNeXt-50](https://arxiv.org/abs/1611.05431) due to its reportedly [higher accuracy](https://github.com/facebookresearch/ResNeXt) but at the point of writing the speed to comparable accuracy is not on par with ResNet-50 on my current settings. It might require further tuning.
+
+With transfer learning, I froze the architecture and weights from all the layers except the last two - pooling and fully connected layers and fine tuned these two. This way I don't need to train the whole CNN from scrach (which is also not necessary). Here is a great visualization showing the building blocks of [ResNet-50 architecture](http://ethereon.github.io/netscope/#/gist/db945b393d40bfa26006). 
+
+Reason for training the 
+
+- main module, pooling module, color module
 
 
 
@@ -226,13 +275,6 @@ When the application asks for the next batch of data, a DataLoader uses its stor
 
 The following is an example of calling the DataLoader constructor:
 
-Here we are creating a DataLoader object for our training dataset with a batch size of 50. The sampler parameter specifies the strategy with which we want to sample data while constructing batches.
-
-We have different samplers available in torch.utils.data.sampler. The explanation is straightforward. You can read about them in the Pytorch Documentation here.
-
-The num_workers argument specifies how many processes (or cores) we want to use while loading our data. This provides parallelism while loading large datasets. Default is 0 which means load all data in main process.
-
-DataLoader reports its length in number of batches. Since we created this DataLoader with a batch size of 50 and we had 50,000 images in our train dataset, we have the length of dataloader = 1000 batches.
 
 
 
