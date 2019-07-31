@@ -401,27 +401,8 @@ def naive_query(features, deep_feats, labels, retrieval_top_n=5):
 {% endhighlight %} 
 </p>
 </details>  
+
 - a K-Means approach that added an intermediate step to classify the images to a number of clusters (50 in my case) in the features space. The query would firstly look for the cluster, followed by similarity search within the cluster. 
-
-<details>
-<summary>
-<i>K-Means query</i>
-</summary>
-<p>{% highlight python %}
-feats, labels = load_feat_db()
-model = KMeans(n_clusters=N_CLUSTERS, random_state=0, n_jobs=-1).fit(feats)
-
-def kmeans_query(clf, features, deep_feats, labels, retrieval_top_n=5):
-    label = clf.predict(features[0].reshape(1, features[0].shape[0]))
-    ind = np.where(clf.labels_ == label)
-    d_feats = deep_feats[ind]
-    n_labels = list(np.array(labels)[ind])
-    results = get_deep_top_n(features, d_feats, n_labels, retrieval_top_n)
-    return results
-</p>
-</details>
-
-- a PCA (Principal Component Analysis) that reduced dimensionality of the feature vectors. It appears that we could reduce the features from 512 to 30 to explain at least 90% of the variance.
 
 
 Comparing the retrieval time taken by these three approaches, PCA achieved the fastest place. It also eases the burden on server from database loading, as the features data file is reduced from 286MB to 34MB
