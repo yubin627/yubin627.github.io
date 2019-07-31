@@ -451,20 +451,3 @@ The app would firstly picks one image from the upper wear dataset (139,709 image
 Have fun!
 
 See codes to the flask deployment.
-
----
-## Additional Notes 
-
-### Features
-Color features 
-
-### Libraries
-FastAi is a fantastic wrapper on PyTorch that simplifies the code dramatically. It also provides lots of function that makes model fine-tuning so much easier. Here is a notebook that I attempted on ResNet-30 and ResNet-50 using the same dataset on FastAi.
-
-## Future Work
-
-
-
-
-
-
