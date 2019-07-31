@@ -84,13 +84,16 @@ When the application asks for the next batch of data, a DataLoader uses its stor
 
 The following is a snippet of the codes that I used to create the training dataset:
 
-{% highlight python %}
-
 <details>
-  <summary>stuff with *mark* **down**</summary>
-  <p>
-  <details>
-    <summary><small>nested</small> stuff</summary><p>
+<summary>
+<i>Like this? </i>
+<a href="http://www.ironspider.ca/format_text/fontstyles.htm">
+Useful Source</a>
+</summary>
+<p>It's because the details block is html5. If you want to modify it your best bet is using html5. </p>
+</details>
+
+{% highlight python %}
 class Fashion_attr_prediction(data.Dataset):
     def __init__(self, type="train", transform=None, target_transform=None, crop=False, img_path=None):
         self.transform = transform
@@ -204,12 +207,6 @@ class Fashion_attr_prediction(data.Dataset):
             target = self.target_transform(target)
 
         return img, img_path if self.type == "all" else target
-
-  </p></details>
-</p></details>
-
-
-
 {% endhighlight %}
 
 Notes:
