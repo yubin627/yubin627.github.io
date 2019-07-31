@@ -86,6 +86,11 @@ The following is a snippet of the codes that I used to create the training datas
 
 {% highlight python %}
 
+<details>
+  <summary>stuff with *mark* **down**</summary>
+  <p>
+  <details>
+    <summary><small>nested</small> stuff</summary><p>
 class Fashion_attr_prediction(data.Dataset):
     def __init__(self, type="train", transform=None, target_transform=None, crop=False, img_path=None):
         self.transform = transform
@@ -199,6 +204,11 @@ class Fashion_attr_prediction(data.Dataset):
             target = self.target_transform(target)
 
         return img, img_path if self.type == "all" else target
+
+  </p></details>
+</p></details>
+
+
 
 {% endhighlight %}
 
