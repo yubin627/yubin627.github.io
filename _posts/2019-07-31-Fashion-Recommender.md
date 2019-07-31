@@ -398,12 +398,59 @@ def get_deep_top_n(features, deep_feats, labels, retrieval_top_n=5):
 def naive_query(features, deep_feats, labels, retrieval_top_n=5):
     results = get_deep_color_top_n(features, deep_feats, labels, retrieval_top_n)
     return results
+    
+feats, labels = load_feat_db()   
+f = dump_single_feature_npy(example) 
+result = naive_query(f, feats, labels, 5)
+    
 {% endhighlight %} 
 </p>
 </details>  
 
 - a K-Means approach that added an intermediate step to classify the images to a number of clusters (50 in my case) in the features space. The query would firstly look for the cluster, followed by similarity search within the cluster. 
 
+<details>
+<summary>
+<i>KMeans query</i>
+</summary>
+<p>{% highlight python %}
+feats, labels = load_feat_db()
+model = KMeans(n_clusters=N_CLUSTERS, random_state=0, n_jobs=-1).fit(feats)
+
+def kmeans_query(clf, features, deep_feats, labels, retrieval_top_n=5):
+    label = clf.predict(features[0].reshape(1, features[0].shape[0]))
+    ind = np.where(clf.labels_ == label)
+    d_feats = deep_feats[ind]
+    n_labels = list(np.array(labels)[ind])
+    results = get_deep_top_n(features, d_feats, n_labels, retrieval_top_n)
+    return results
+
+feats, labels = load_feat_db()   
+f = dump_single_feature_npy(example) 
+result = kmeans_query(model, f, feats, labels, 5)
+</p>
+</details>
+
+- a PCA (Principal Component Analysis) that reduced dimensionality of the feature vectors. It appears that we could reduce the features from 512 to 30 to explain at least 90% of the variance.
+
+<details>
+<summary>
+<i>PCA on feature vectors</i>
+</summary>
+<p>{% highlight python %}
+    
+#Reduce dimensionality on deep features
+scaler = MinMaxScaler(feature_range=[-1, 1])
+feats_rescaled = scaler.fit_transform(feats)
+pca = PCA(n_components=30)
+feats_reduced = pca.fit_transform(feats_rescaled)
+
+with open(feat_list, "w") as fw:
+    fw.write("\n".join(labels))
+np.save(feat_all, np.vstack(feats_reduced))
+{% endhighlight %} 
+</p>
+</details>
 
 Comparing the retrieval time taken by these three approaches, PCA achieved the fastest place. It also eases the burden on server from database loading, as the features data file is reduced from 286MB to 34MB
 ![alt-text-1](/assets/images/retrieval-time.png "retrieval")
