@@ -86,14 +86,9 @@ The following is a snippet of the codes that I used to create the training datas
 
 <details>
 <summary>
-<i>Like this? </i>
-<a href="http://www.ironspider.ca/format_text/fontstyles.htm">
-Useful Source</a>
+<i>dataloader object</i>
 </summary>
-<p>It's because the details block is html5. If you want to modify it your best bet is using html5. </p>
-</details>
-
-{% highlight python %}
+<p>{% highlight python %}
 class Fashion_attr_prediction(data.Dataset):
     def __init__(self, type="train", transform=None, target_transform=None, crop=False, img_path=None):
         self.transform = transform
@@ -207,7 +202,11 @@ class Fashion_attr_prediction(data.Dataset):
             target = self.target_transform(target)
 
         return img, img_path if self.type == "all" else target
-{% endhighlight %}
+{% endhighlight %} 
+</p>
+</details>
+
+
 
 Notes:
 https://www.datascience.com/blog/transfer-learning-in-pytorch-part-two
