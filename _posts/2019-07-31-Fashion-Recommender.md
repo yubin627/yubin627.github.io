@@ -17,21 +17,21 @@ Check out the [app](https://deepfashion-finder.herokuapp.com/)
 
 ---
 
-When it comes to what to wear, I often need inspiration from what is around me - it could be from Instagram photos or some passers-by I spotted on the street. For an avid online (almost exclusively) shopper like me, I would start browsing immediately on the websites, but it has been quite a challenge for me to find the exact words to describe the items accurately and to type in the search bar. 
+When it comes to what to wear, I often need inspiration from what is around me - it could be from Instagram photos or some passers-by I spotted on the street. For an avid online (almost exclusively) shopper like me, I would start browsing immediately on the websites if I see something that I like, but it has been quite a challenge for me to find the exact words to describe the items accurately in the search bar. 
 
-Image search engine is an answer to my problem. In reality it actually has already been a default product feature for most of the major e-commerce sites these days. As a beginner in deep learnnig myself, I am very intrigued to get some hands-on and better understanding of the algorithms under the hood. 
+Image search engine is an answer to my problem. In reality it has already become a prevalent product feature on the major e-commerce sites these days. For myself as a beginner just starting the learning journey in deep learnnig, I am very intrigued to get some hands-on and better understanding of the algorithms under the hood. 
 
 
 ## Goal
 
-My goal would be to build a search engine based on image similarity-based recommendations. 
+My goal would be to build a search engine based on image similarity for clothing recommendation. 
 Essentially the workflow consists of three steps:
 1. Modeling
 2. Feature extraction
 3. Image retrieval
 
 Following this workflow, there are a few points to consider:
-- Can simple CNN handle this task? (TBC)
+- Can shallow CNN handle this task? 
 - If not, which pre-trained model works the best, in terms of accuracy and training time? 
 - How to extract the feature vectors (or embeddings) to capture most of the information contained in the images?
 - Given a large dataset (130k images in this project), what is the optimal algorithm for image retrieval?
@@ -64,19 +64,18 @@ As shown below is the data folder structure.
 ### Hardware & Environment
 
 I trained the model on floydhub for its easy set-up. The configuration is as follows:
-`[GPU instance]`
+`Docker image: floydhub/pytorch:1.0.1-gpu.cuda9cudnn7-py3.42`
 `torch==1.1`
 `torchvision==0.3`
-on floydhub's pytorch docker image
 
-## Model Training
+## Data Preprocessing
 
-### Preparing dataloader
+### Preparing Dataset
 PyTorch DataLoaders are objects that act as Python generators. They supply data in chunks or batches while training and validation. We can instantiate DataLoader objects and pass our datasets to them. DataLoaders store the dataset objects internally.
 
 When the application asks for the next batch of data, a DataLoader uses its stored dataset as a Python iterator to get the next element (row or image in our case) of data. Then it aggregates a batch worth of data and returns it to the application.
 
-The following is a snippet of the codes that I used to create the training dataset (click the triangle to expand):
+The following is a snippet of the codes that I used to create the training dataset containing the cropped images and the target variable. Click the triangle to expand the code block:
 
 <details>
 <summary>
@@ -191,7 +190,7 @@ class Fashion_attr_prediction(data.Dataset):
 </details>
 Here I created a class to prepare the dataset object. There are various options (self.type) created to cater for the needs of training and feature extraction later. To be more specific, `train/test` data will be used for training the model; `all` will be used for feature extraction, `triplet` will be used to generate triplet margin loss function for the backpropagation. More on loss function later.
 
-### Preprocessing and Transforming the Dataset
+### Preprocessing and Data Augmentation
 One more step before we move on to defining our network and start training - we need to preprocess our datasets. Specifically, this incluces Resizing, Data Augmentation, Conversion to PyTorch Tensors and Normalizing. 
 
 <details>
@@ -243,6 +242,10 @@ triplet_loader = torch.utils.data.DataLoader(
 {% endhighlight %} 
 </p>
 </details>
+
+## Modeling
+### Shallow CNN Modeling
+I had an attempt on a shallow network with 3 layers and was only able to achieve 41% accuracy. This is understandable since 3 layers could possibly only detect basic patterns (circles, grids etc.) but would not be able to take care of the complexities of clothing.
 
 ### Modeling with Transfer Learning
 
@@ -557,5 +560,5 @@ There are [various deep learning frameworks](https://skymind.ai/wiki/comparison-
 I came across FastAi which is a fantastic wrapper sitting on top of PyTorch that simplifies the code dramatically. It also provides lots of function that makes model fine-tuning so much easier. Here is a [notebook](https://github.com/yubin627/ga_projects/blob/master/Capstone_Project/codes/fasti_ai.ipynb) where I attempted a simple trial of ResNet-34 and ResNet-50 using the same dataset on FastAi. Love to play with it more!
 
 ## Future Work
-- Modify the codes to enable external image input from user.
-- Expand the application of the model to other image dataset to build use cases that answer real-world problems. I have wanted to join the [volunteer project](https://www.meetup.com/DataKind-SG/events/261014834/?_xtd=gqFypzUzMTY4NDihcKZpcGhvbmU&from=ref) in DataJam to identify water points around the globe. Comparing to the 'ideal' DeepFashion dataset, this would require much more efforts in the data preprocessing involving data cleaning, labeling etc.
+- Explore crop detector to enable input from external source without bbox information.
+- Expand the application of the model to other image dataset to build use cases that answer real-world problems. I have wanted to join the [volunteer project](https://www.meetup.com/DataKind-SG/events/261014834/?_xtd=gqFypzUzMTY4NDihcKZpcGhvbmU&from=ref) in DataKind to identify water points around the globe. Comparing to the 'ideal' DeepFashion dataset, this would require much more efforts in the data preprocessing involving data cleaning, labeling etc.

@@ -6,7 +6,7 @@ layout: page
 
 <p>It is a great pleasure meeting you!</p>
 
-<p>I am passionate about creating useful products based on insights generated from data. I came from engineering background with a degree in Materials Science and Engineering and developed stronger interest in data science day by day. It sits at the core of problem solving from my work experience, from semiconductor manufacturing process troubleshooting to effective audience targeting in digital advertising. I am a believer of data democratization.</p>
+<p>I am passionate about creating useful products based on insights generated from data. I came from engineering background with a degree in Materials Science and Engineering and developed stronger interest in data science day by day. It sits at the core of problem solving from my work experience, from semiconductor manufacturing process troubleshooting to effective audience targeting in digital advertising. I am a believer of data democratization and therefore collaboration within the organization.</p>
 
 <h2>Skills</h2>
 
