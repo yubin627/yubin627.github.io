@@ -541,7 +541,7 @@ deep_feats = []
 color_feats = []
 labels = []
 dump_dataset(all_loader, deep_feats, color_feats, labels)
-
+{% endhighlight %} 
 </p>
 </details>
 
