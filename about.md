@@ -4,43 +4,29 @@ layout: page
 ---
 ![Profile Image]({{ site.url }}/{{ site.picture }})
 
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<p>It is a great pleasure meeting you!</p>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<p>I am passionate about creating useful products based on insights generated from data. I came from engineering background with a degree in Materials Science and Engineering and developed stronger interest in data science day by day. It sits at the core of problem solving from my work experience, from semiconductor manufacturing process troubleshooting to effective audience targeting in digital advertising. I am a believer of data democratization.</p>
 
 <h2>Skills</h2>
 
 <ul class="skill-list">
-	<li>HTML - Jade - Haml - Erb</li>
-	<li>Responsive (Mobile First)</li>
-	<li>CSS (Stylus, Sass, Less)</li>
-	<li>Css Frameworks (Bootstrap, Foundation)</li>
-	<li>Javascript (Design Patterns, Testes)</li>
-	<li>NodeJS</li>
-	<li>AngularJS - ReactJS</li>
-	<li>Grunt - Gulp - Yeoman</li>
-	<li>Git</li>
-	<li>PHP</li>
 	<li>Python</li>
-	<li>MySQL - MongoDB</li>
-	<li>Scrum and Kanban</li>
-	<li>TDD e Continuous Integration</li>
+	<li>BigQuery, PostgreSQL</li>
+	<li>Apache Spark</li>
+	<li>Git</li>
+	<li>JMP</li>
+	<li>Google Cloud Platform</li>
+	<li>Amazon Web Services</li>
+	<li>Google Analytics</li>
+	<li>Google Apps Script</li>
 </ul>
 
 <h2>Projects</h2>
 
 <ul>
-	<li><a href="https://github.com/">Lorem Lorem</a></li>
-	<li><a href="https://github.com/">Ipsum Dolor</a></li>
-	<li><a href="https://github.com/">Dolor Lorem</a></li>
+	<li><a href="https://github.com/yubin627/ga_projects/tree/master/Project_1">Project 1: A glance at SAT/ACT participation rates</a></li>
+	<li><a href="https://github.com/yubin627/ga_projects/tree/master/Project_2">Project 2 - Ames Housing Data and Kaggle Challenge</a></li>
+	<li><a href="https://github.com/yubin627/ga_projects/tree/master/Project_3">Project 3: Web APIs & Classification with basic NLP</a></li>
+	<li><a href="https://github.com/yubin627/ga_projects/tree/master/Capstone_Project">Capstone Project: Fashion Recommender based on Image Similarity with Deep Learning</a></li>
 </ul>
