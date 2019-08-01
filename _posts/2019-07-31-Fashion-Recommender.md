@@ -11,7 +11,7 @@ category: project
 author: yubin
 externalLink: false
 ---
-See the [codes](https://github.com/yubin627/ga_projects)
+See the [codes](https://github.com/yubin627/ga_projects/tree/master/Capstone_Project/codes)
 
 Check out the [app](https://deepfashion-finder.herokuapp.com/)
 
@@ -63,7 +63,7 @@ As shown below is the data folder structure.
 ### Hardware & Environment
 
 I trained the model on floydhub for its easy set-up. The configuration is as follows:
-`[GPU instance](https://docs.floydhub.com/guides/pytorch/#pytorch-10)`
+`[GPU instance]`
 `torch==1.1`
 `torchvision==0.3`
 on floydhub's pytorch docker image
@@ -458,7 +458,7 @@ I built a simple [web application](https://deepfashion-finder.herokuapp.com/) ba
 The app would firstly picks one image from the upper wear dataset (139,709 images) from DeepFashion. You can refresh the page till you see an image that you like, and click the image to check out the results. 
 Have fun!
 
-See codes to the flask deployment.
+See the [codes](https://github.com/yubin627/ga_projects/tree/master/Capstone_Project/app) for the flask deployment.
 
 ---
 ## Additional Notes 
@@ -466,7 +466,95 @@ See codes to the flask deployment.
 ### Features
 Color features 
 
+I extracted the RGB information by average pooling the original 224*224*3 images to 7*7*3 tensors, and then took the 2048*7*7 last convolutional layer trained by the model and applied average pooling to get 7*7 matrices that captures coarse information about the images. Subsequently I used the positions of the maximum 10 values from the 7*7 matrix to extract 10*3 vectors from the image 7*7*3 tensors. This way tese feature vectors capture most of the color information.
+
+<details>
+<summary>
+<i>color features generator</i>
+</summary>
+<p>{% highlight python %}
+class c_model(nn.Module):
+    '''
+    Extract color tensors from original images
+    input: N * C * 224 * 224
+    output: N * C * 7 * 7
+    '''
+    def __init__(self, pooling_size=32):
+        super(c_model, self).__init__()
+        self.pooling = nn.AvgPool2d(pooling_size)
+
+    def forward(self, x):
+        return self.pooling(x)
+
+class p_model(nn.Module):
+    '''
+    Apply average pooling to obtain coarse information from 
+    the last conv layer
+    input: N * C * W * H
+    output: N * 1 * W * H
+    '''
+    def __init__(self):
+        super(p_model, self).__init__()
+
+    def forward(self, x):
+        n, c, w, h = x.size()
+        x = x.view(n, c, w * h).permute(0, 2, 1)
+        pooled = F.avg_pool1d(x, c)
+        return pooled.view(n, 1, w, h)
+
+main_model = f_model(model_path=DUMPED_MODEL).cuda()
+color_model = c_model().cuda()
+pooling_model = p_model().cuda()
+extractor = FeatureExtractor(main_model, color_model, pooling_model)
+
+all_loader = torch.utils.data.DataLoader(
+        Fashion_attr_prediction(type="all", transform=data_transform_test),
+        batch_size=EXTRACT_BATCH_SIZE, num_workers=NUM_WORKERS, pin_memory=True)
+
+def dump_dataset(loader, deep_feats, color_feats, labels):
+    for batch_idx, (data, data_path) in enumerate(loader):
+        data = Variable(data).cuda()
+        deep_feat, color_feat = extractor(data)
+        for i in range(len(data_path)):
+            path = data_path[i]
+            feature_n = deep_feat[i].squeeze()
+            color_feature_n = color_feat[i]
+            # dump_feature(feature, path)
+
+            deep_feats.append(feature_n)
+            color_feats.append(color_feature_n)
+            labels.append(path)
+
+        if batch_idx % LOG_INTERVAL == 0:
+            print("{} / {}".format(batch_idx * EXTRACT_BATCH_SIZE, len(loader.dataset)))
+    
+        feat_all = '/output/all_feat_pca.npy'
+        color_feat_all = '/output/all_color_feat.npy'
+        feat_list = '/output/all_feat.list'
+        with open(feat_list, "w") as fw:
+            fw.write("\n".join(labels))
+        np.save(feat_all, np.vstack(deep_feats_reduced))
+        np.save(color_feat_all, np.vstack(color_feats))
+        print("Dumped to all_feat.npy, all_color_feat.npy and all_feat.list.")  
+
+deep_feats = []
+color_feats = []
+labels = []
+dump_dataset(all_loader, deep_feats, color_feats, labels)
+
+</p>
+</details>
+
+So now we have two types of features, one being the 512-dim deep features and 10*3-dim color features. We can play around with the similarity score by customizing the weightage to these two components.
+
+As follows are some of the examples with various weights.
+
+
 ### Libraries
-FastAi is a fantastic wrapper on PyTorch that simplifies the code dramatically. It also provides lots of function that makes model fine-tuning so much easier. Here is a notebook that I attempted on ResNet-30 and ResNet-50 using the same dataset on FastAi.
+There are [various deep learning frameworks](https://skymind.ai/wiki/comparison-frameworks-dl4j-tensorflow-pytorch) that can achieve the same task. PyTorch is easier for me to pick up as it is similar to Python NumPy in the way that it manages computations, while TensorFlow appears more complicated to me for its similarity to C++ (which I have little experience in). However it is still a bit of a challege to write the training codes and to visualize the training progress in PyTorch.
+
+I came across FastAi which is a fantastic wrapper sitting on top of PyTorch that simplifies the code dramatically. It also provides lots of function that makes model fine-tuning so much easier. Here is a [notebook](https://github.com/yubin627/ga_projects/blob/master/Capstone_Project/codes/fasti_ai.ipynb) that I attempted on ResNet-34 and ResNet-50 using the same dataset on FastAi. Love to play with it more!
 
 ## Future Work
+Modify the codes to enable external image input from user.
+Expand the application of the model to other image dataset to build use cases that answer real business problems.
