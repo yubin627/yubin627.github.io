@@ -15,8 +15,9 @@ See the [codes](https://github.com/yubin627/ga_projects/tree/master/Capstone_Pro
 
 Check out the [app](https://deepfashion-finder.herokuapp.com/)
 
+---
 
-When it comes to what to wear, I often seek inspiration from what is around me - it could be from Instagram photos or some passers-by I spotted on the street. For an avid online (almost exclusively) shopper like me, I would start browsing immediately on the websites, but it has been quite a challenge for me to find the exact words to describe the items accurately and to type in the search bar. 
+When it comes to what to wear, I often need inspiration from what is around me - it could be from Instagram photos or some passers-by I spotted on the street. For an avid online (almost exclusively) shopper like me, I would start browsing immediately on the websites, but it has been quite a challenge for me to find the exact words to describe the items accurately and to type in the search bar. 
 
 Image search engine is an answer to my problem. In reality it actually has already been a default product feature for most of the major e-commerce sites these days. As a beginner in deep learnnig myself, I am very intrigued to get some hands-on and better understanding of the algorithms under the hood. 
 
@@ -553,8 +554,8 @@ As follows are some of the examples with various weights.
 ### Libraries
 There are [various deep learning frameworks](https://skymind.ai/wiki/comparison-frameworks-dl4j-tensorflow-pytorch) that can achieve the same task. PyTorch is easier for me to pick up as it is similar to Python NumPy in the way that it manages computations, while TensorFlow appears more complicated to me for its similarity to C++ (which I have little experience in). However it is still a bit of a challege to write the training codes and to visualize the training progress in PyTorch.
 
-I came across FastAi which is a fantastic wrapper sitting on top of PyTorch that simplifies the code dramatically. It also provides lots of function that makes model fine-tuning so much easier. Here is a [notebook](https://github.com/yubin627/ga_projects/blob/master/Capstone_Project/codes/fasti_ai.ipynb) that I attempted on ResNet-34 and ResNet-50 using the same dataset on FastAi. Love to play with it more!
+I came across FastAi which is a fantastic wrapper sitting on top of PyTorch that simplifies the code dramatically. It also provides lots of function that makes model fine-tuning so much easier. Here is a [notebook](https://github.com/yubin627/ga_projects/blob/master/Capstone_Project/codes/fasti_ai.ipynb) where I attempted a simple trial of ResNet-34 and ResNet-50 using the same dataset on FastAi. Love to play with it more!
 
 ## Future Work
-Modify the codes to enable external image input from user.
-Expand the application of the model to other image dataset to build use cases that answer real business problems.
+- Modify the codes to enable external image input from user.
+- Expand the application of the model to other image dataset to build use cases that answer real-world problems. I have wanted to join the [volunteer project](https://www.meetup.com/DataKind-SG/events/261014834/?_xtd=gqFypzUzMTY4NDihcKZpcGhvbmU&from=ref) in DataJam to identify water points around the globe. Comparing to the 'ideal' DeepFashion dataset, this would require much more efforts in the data preprocessing involving data cleaning, labeling etc.
