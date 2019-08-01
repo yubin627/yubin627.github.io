@@ -364,7 +364,8 @@ dump_dataset(all_loader, deep_feats, labels)
 ## Image Retrieval
 Now with the feature vector of all images available, it's time to build a search function(s) to get similar images given an image input. I tried three approaches and compared the time taken in each method.
 The methods included:
-- a naive approach that computes the similarity score between the given image to every other image in the dataset and get the top-n images.
+
+**A naive approach** that computes the similarity score between the given image to every other image in the dataset and get the top-n images.
 <details>
 <summary>
 <i>naive query</i>
@@ -407,11 +408,10 @@ result = naive_query(f, feats, labels, 5)
 </p>
 </details>  
 
-- a K-Means approach that added an intermediate step to classify the images to a number of clusters (50 in my case) in the features space. The query would firstly look for the cluster, followed by similarity search within the cluster. 
-
+**A K-Means approach** that added an intermediate step to classify the images to a number of clusters (50 in my case) in the features space. The query would firstly look for the cluster, followed by similarity search within the cluster. 
 <details>
 <summary>
-<i>KMeans query</i>
+<i>K-Means query</i>
 </summary>
 <p>{% highlight python %}
 feats, labels = load_feat_db()
@@ -424,15 +424,28 @@ def kmeans_query(clf, features, deep_feats, labels, retrieval_top_n=5):
     n_labels = list(np.array(labels)[ind])
     results = get_deep_top_n(features, d_feats, n_labels, retrieval_top_n)
     return results
-
-feats, labels = load_feat_db()   
-f = dump_single_feature_npy(example) 
-result = kmeans_query(model, f, feats, labels, 5)
+{% endhighlight %} 
 </p>
 </details>
 
-- a PCA (Principal Component Analysis) that reduced dimensionality of the feature vectors. It appears that we could reduce the features from 512 to 30 to explain at least 90% of the variance.
+**A PCA (Principal Component Analysis) approach** that reduced dimensionality of the feature vectors. It appears that we could reduce the features from 512 to 30 to explain at least 90% of the variance.
+<details>
+<summary>
+<i>PCA on feature vectors</i>
+</summary>
+<p>{% highlight python %}
+#Reduce dimensionality on deep features
+scaler = MinMaxScaler(feature_range=[-1, 1])
+feats_rescaled = scaler.fit_transform(feats)
+pca = PCA(n_components=30)
+feats_reduced = pca.fit_transform(feats_rescaled)
 
+with open(feat_list, "w") as fw:
+    fw.write("\n".join(labels))
+np.save(feat_all, np.vstack(feats_reduced))
+{% endhighlight %} 
+</p>
+</details>
 
 Comparing the retrieval time taken by these three approaches, PCA achieved the fastest place. It also eases the burden on server from database loading, as the features data file is reduced from 286MB to 34MB
 ![alt-text-1](/assets/images/retrieval-time.png "retrieval")
@@ -446,3 +459,14 @@ The app would firstly picks one image from the upper wear dataset (139,709 image
 Have fun!
 
 See codes to the flask deployment.
+
+---
+## Additional Notes 
+
+### Features
+Color features 
+
+### Libraries
+FastAi is a fantastic wrapper on PyTorch that simplifies the code dramatically. It also provides lots of function that makes model fine-tuning so much easier. Here is a notebook that I attempted on ResNet-30 and ResNet-50 using the same dataset on FastAi.
+
+## Future Work
