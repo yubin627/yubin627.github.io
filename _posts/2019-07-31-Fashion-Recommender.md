@@ -64,9 +64,10 @@ As shown below is the data folder structure.
 ### Hardware & Environment
 
 I trained the model on floydhub for its easy set-up. The configuration is as follows:
-`Docker image: floydhub/pytorch:1.0.1-gpu.cuda9cudnn7-py3.42`
-`torch==1.1`
-`torchvision==0.3`
+
+| Instance 	| Docker Image                                  	| torchvision 	|  
+|:----------|:-----------------------------------------------	|:-------------	|
+| GPU      	| floydhub/pytorch:1.0.1-gpu.cuda9cudnn7-py3.42 	| 0.3         	| 
 
 ## Data Preprocessing
 

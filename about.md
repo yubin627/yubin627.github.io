@@ -4,9 +4,14 @@ layout: page
 ---
 ![Profile Image]({{ site.url }}/{{ site.picture }})
 
+
 <p>It is a great pleasure meeting you!</p>
 
-<p>I am passionate about creating useful products based on insights generated from data. I came from engineering background with a degree in Materials Science and Engineering and developed stronger interest in data science day by day. It sits at the core of problem solving from my work experience, from semiconductor manufacturing process troubleshooting to effective audience targeting in digital advertising. I am a believer of data democratization and therefore collaboration within the organization.</p>
+<p>I am passionate about creating useful products based on insights generated from data. By education I am an engineer who started her early career in semiconductor industry troubleshooting manufacturing process issues via statistical analysis. Along the way I developed strong interest in data science day by day during my work as I realized that the beauty about my job lies with the arts of churning data into something easy and important for people to understand. Even though I switched path to digital advertising industry later on, it still sits at the core of my daily life as a data analyst.</p>
+
+<p>I am a strong believer of data/knowledge democratization and always advocate for collaboration with aligned team direction.</p>
+
+<p>During my spare time, I love to sketch / paint / practise chinese calligraphy / play with chinese seal carving.</p>
 
 <h2>Skills</h2>
 
