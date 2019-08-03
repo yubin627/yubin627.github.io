@@ -63,11 +63,11 @@ As shown below is the data folder structure.
 
 ### Hardware & Environment
 
-I trained the model on floydhub for its easy set-up. The configuration is as follows:
+I trained the model on floydhub for its user-friendly set-up process. The configuration is as follows:
 
 | Instance 	| Docker Image                                  	| torchvision 	|  
 |:----------|:-----------------------------------------------	|:-------------	|
-| GPU      	| floydhub/pytorch:1.0.1-gpu.cuda9cudnn7-py3.42 	| 0.3         	| 
+| GPU      	| floydhub/pytorch:1.0.1-gpu.cuda9cudnn7-py3.42 	| install 0.3   | 
 
 ## Data Preprocessing
 
@@ -452,7 +452,7 @@ np.save(feat_all, np.vstack(feats_reduced))
 </p>
 </details>
 
-Comparing the retrieval time taken by these three approaches, PCA achieved the fastest place. It also eases the burden on server from database loading, as the features data file is reduced from 286MB to 34MB
+Comparing the retrieval time taken by these three approaches, PCA scored the top place. In addition to the improvement in algorithm time complexity, it also eases the burden on server in database loading, as the features data file is reduced from 286MB to 34MB
 ![alt-text-1](/assets/images/retrieval-time.png "retrieval")
 Therefore 
 
@@ -460,7 +460,7 @@ Therefore
 
 I built a simple [web application](https://deepfashion-finder.herokuapp.com/) based on the search engine generated above. The front page looks like this:
 ![alt-text-1](/assets/images/deepfashion-home.png "app homepage")
-The app would firstly picks one image from the upper wear dataset (139,709 images) from DeepFashion. You can refresh the page till you see an image that you like, and click the image to check out the results. 
+The app would firstly pick one image randomly from the upper wear dataset (139,709 images) within DeepFashion. You can refresh the page till you see an image that you like, and click the image to check out the results. 
 Have fun!
 
 See the [codes](https://github.com/yubin627/ga_projects/tree/master/Capstone_Project/app) for the flask deployment.

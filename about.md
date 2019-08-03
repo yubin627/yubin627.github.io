@@ -7,9 +7,14 @@ layout: page
 
 <p>It is a great pleasure meeting you!</p>
 
-<p>I am passionate about creating useful products based on insights generated from data. By education I am an engineer who started her early career in semiconductor industry troubleshooting manufacturing process issues via statistical analysis. Along the way I developed strong interest in data science day by day during my work as I realized that the beauty about my job lies with the arts of churning data into something easy and important for people to understand. Even though I switched path to digital advertising industry later on, it still sits at the core of my daily life as a data analyst.</p>
+<p>I am passionate about creating useful products based on insights generated from data. By education I am an engineer who started her early career in semiconductor industry troubleshooting manufacturing process issues via statistical analysis. Along the way I developed strong interest in data science day by day during my work as I realized that the beauty of the job lies with the arts of churning data into something easy and important for people to understand. Even though I switched path to digital advertising industry later on, it still sits at the core of my daily life as a data analyst.</p>
 
-<p>I am a strong believer of data/knowledge democratization and always advocate for collaboration with aligned team direction.</p>
+<p>When it comes to work, I am a strong believer of</p>
+<ul>
+  <li>10,000-hour rule of delibrate practice</li>
+  <li>data / knowledge democratization </li>
+  <li>collaboration with aligned team direction</li>
+</ul>
 
 <p>During my spare time, I love to sketch / paint / practise chinese calligraphy / play with chinese seal carving.</p>
 
