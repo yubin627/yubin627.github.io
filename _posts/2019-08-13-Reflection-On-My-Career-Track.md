@@ -4,8 +4,8 @@ layout: post
 date: 2019-08-13 14:10
 tag: reflection
 headerImage: false
-projects: true
-hidden: true # don't count this post in blog pagination
+projects: false
+hidden: false # don't count this post in blog pagination
 description: ""
 category: blog
 author: yubin
