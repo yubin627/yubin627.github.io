@@ -1,6 +1,6 @@
 ---
 title: "Reflection on my career track"
-layout: blog
+layout: post
 date: 2019-08-13 14:10
 tag: reflection
 headerImage: false
