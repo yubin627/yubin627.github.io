@@ -1,7 +1,7 @@
 ---
 title: "Regression and Classification with Housing Data"
 layout: post
-date: 2019-06-15 22:10
+date: 2019-07-01 22:10
 tag: Regression Model
 headerImage: false
 projects: true
@@ -10,6 +10,7 @@ description: ""
 category: project
 author: yubin
 externalLink: false
+
 ---
 
 Please see the [codes](https://github.com/yubin627/ga_projects/tree/master/Project_2)

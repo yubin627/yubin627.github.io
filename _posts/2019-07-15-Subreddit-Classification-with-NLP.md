@@ -1,7 +1,7 @@
 ---
 title: "Subreddit Classification with API and NLP"
 layout: post
-date: 2019-07-01 22:10
+date: 2019-07-15 10:10
 tag: NLP
 headerImage: false
 projects: true
