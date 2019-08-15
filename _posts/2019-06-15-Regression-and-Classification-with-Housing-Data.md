@@ -16,12 +16,13 @@ Please see the [codes](https://github.com/yubin627/ga_projects/tree/master/Proje
 
 ---
 
-**Problem Statement**
+###Problem Statement
+
 Given a set of information about a house, we want to be able to predict its expected price. Ideally, using the predictors, we can optimise the selling price of the house.
 The dataset comes from Kaggle competition on [House Prices: Advanced Regression Techniques](https://www.kaggle.com/c/house-prices-advanced-regression-techniques)
 
 
-**Summary**
+###Summary
 
 |Model|R2 (train)|R2 (test)|RMSE (USD)|
 |:--- | --- | --- | --- | 
@@ -35,6 +36,7 @@ In general, with regularization and hyperparameter tuning, we are able to achiev
 
 After reviewing all the models evaluated so far, I will proceed with the Ridge and Elastic Net models for submission of the kaggle challenge.
 
-**Caveat:**
+###Caveat
+
 - Although the RMSE may look reasonably good, the model has its own limitation. It might not be able to produce a good fit for housing properties of rare type such as those with pools or those in agricultural zones. Recall that we have removed a few features due to limited samples in certain categories, e.g. pool_area was removed as only less than 4% of the properties have pools.
 - The model still has room for further improvement if domain expert could step in during the feature selection/engineering stage. For example, there are 28 categories in the 'neighorhood' feature. It could certainly be refined if we know that if there are ways to group the neighborhood to reduce complexity of the model. 
