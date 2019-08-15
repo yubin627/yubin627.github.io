@@ -2,7 +2,7 @@
 title: "Reflection On My Career Track"
 layout: post
 date: 2019-08-13 14:10
-tag: reflection
+tag: - reflection
 headerImage: false
 projects: false
 hidden: false # don't count this post in blog pagination
