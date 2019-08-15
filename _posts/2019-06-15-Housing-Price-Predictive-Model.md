@@ -2,7 +2,7 @@
 title: "Regression and Classification with Housing Data"
 layout: post
 date: 2019-06-15 22:10
-tag: NLP
+tag: Regression Model
 headerImage: false
 projects: true
 hidden: true # don't count this post in blog pagination
