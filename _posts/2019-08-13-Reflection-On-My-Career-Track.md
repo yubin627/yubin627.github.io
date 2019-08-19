@@ -2,14 +2,12 @@
 title: "Reflection On My Career Track"
 layout: post
 date: 2019-08-13 14:10
-tag: - reflection
+tag: reflection
 headerImage: false
 projects: false
-hidden: false # don't count this post in blog pagination
-description: ""
+description: Murmuring about my experience
 category: blog
 author: yubin
-externalLink: false
 ---
 
 It has been almost 10 years after I graduated from university, so I think it's a good time to take a look-back and reflect what I have seen, experienced and accomplished. 
