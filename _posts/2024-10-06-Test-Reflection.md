@@ -4,7 +4,8 @@ layout: post
 date: 2024-10-06 12:53
 tag: reflection
 headerImage: false
-projects: false
+projects: true
+hidden: true
 description: Test
 category: blog
 author: yubin
