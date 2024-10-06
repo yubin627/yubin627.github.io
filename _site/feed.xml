@@ -1,0 +1,719 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-10-06T22:00:47+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Yu Bin</title><subtitle>A blog about technology related stuff</subtitle><entry><title type="html">Just a test</title><link href="http://localhost:4000/Test-Reflection/" rel="alternate" type="text/html" title="Just a test" /><published>2024-10-06T12:53:00+08:00</published><updated>2024-10-06T12:53:00+08:00</updated><id>http://localhost:4000/Test-Reflection</id><content type="html" xml:base="http://localhost:4000/Test-Reflection/"><![CDATA[<p>It has been almost 10 years after I graduated from university, so I think it’s a good time to take a look-back and reflect what I have seen, experienced and accomplished.</p>
+
+<hr />
+
+<h2 id="after-graduation">After Graduation</h2>
+
+<p>Fresh out of school I had problems finding the right job. Personally I think the global economic downturn played a big part back then, when the subprime mortgage crisis spread to Singapore and there were not many job openings in the market. As a result I landed on a job not related to my degree - it was a role in financial printing sector. On that job I was managing a bunch of clients and attended to their printing needs everyday, specifically on the legal document requirements. Though it was not a very technical role, I am happy that I got a side-view of the finance industry and learnt how to put myself in others’ shoes and how to manage multiple projects in parallel without missing any deadlines or raising any conflicts.</p>
+
+<p>After a short stint there, I decided to move on and started looking for engineering jobs again as I was not satisfied with my personal growth in the ‘hard’ skillset. (By nature I am still a person who likes to learn, talk and build stuff instead of relaying information from one party to another.)</p>
+
+<h2 id="engineering">Engineering</h2>
+
+<p>I then spent 6 years in semiconductor industry dealing with manufacturing process of microchips. I love my work there where I applied statistical analysis to troubleshoot / optimize the manufacturing process and equipments so as to maximize product yield and quality. The tools I used back then were more ‘proprietary’ and a bit different from the newest applications / libraries widely recognized these days; but the key concepts and frameworks are essentially built on the same thing. I used JMP as well as in-house software to design experiments and analyse results, used SQL to extract lots (a lot is a batch of &lt;=25 wafers in the manufacturing line) history and also used Tableau to report results to leadership.</p>
+
+<p>Day by day I realized that the part that I enjoyed the most (and also the core) of my job is turning data into a story that can be easily understood by my audience, be it the manufacturing team, the planning team or my best friends - engineering team. How to use the least words to tell a concise and effective story that drives actions is the skill that I’d like to continue practising in the rest of my professional life.</p>
+
+<p>At the same time, I saw opportunities blooming in the data science field which was also the driving force of the prospering semiconductor market. Large computing power became indispensable to almost all companies (or even at individual level) to be able to catch up with the growing speed of others. Rather than producing the ‘crops’ to power up the intelligence of other companies / individuals, I found myself also inclined to step into that field - what can I do to unleash the power of data to make an impact to the organization?</p>
+
+<p>I believe this is also definitely something that semiconductor industry is moving towards - smart manufacturing, if well designed and implemented at large scale, could win company great advantages in producing high quality products within shorter cycle time. However this job is easier said than done - particularly in semiconductor business. First among all the complex reasons is the IP issue of manufacturing process and equipments which involve multiple up/down-stream stakeholders; and no one plays a small role here. This has decreed that the data must be managed by a centralized group of authorized and highly skilled personnel; in consequence, data democritization and knowledge sharing is probably something that’s never going to be rolled out to the wider engineering team. There is definitely entry barrier to learn data science skills on the job (but trained professionals are very welcomed I believe).</p>
+
+<h2 id="digital-advertising">Digital Advertising</h2>
+
+<p>I turned my eyes elsewhere - it’s natural that internet company should be my next choice. Why? These companies are built upon the principles of openness and forward thinking so it matches with my goal of keeping updating my skillset in data science. Digital advertising, in particular, has caught my attention. I have read a bit on this and was amazed by the ecosystem and the mechanism of online ads buying/selling. It is really fascinating how fast this business is growing with ever-evolving technologies backing up every piece of it. I’m glad that I managed to land on an analytics role in a leading agency in this field, where I garnered skills in data ETL (extract, tranform and load) flow, experienced cloud computing on GCP (Google Cloud Platform) and AWS (Amazon Web Services) and also got hands-on in writing Python and R scripts to answer measurement questions. I enjoyed this learning process very much, as I was able to pick up new tools to solve business problems that see results quickly.</p>
+
+<p>For example, I applied A/B testing in creative studies to explore various messaging approaches and was able to find that seasonal messaging would be much more effective in raising search interest than a general one. This saved efforts from clients in generating and spending on the less effective creatives. I also managed to prove statistically the value of the digital portion of a campaign by applying the <a href="https://rdrr.io/cran/MarketMatching/man/MarketMatching.html">MarketingMatching</a> R package. This helped convince the clients in scaling up the digital spend in the future campaigns.</p>
+
+<p>This way I’ve got to deal with data generated by humans and come up with insights about user behaviors that can later drive business decisions. I love this process.</p>
+
+<p>There is only one reason for me to leave my last job - I want to turn data into products that can bring greater benefits to the organization.  To be 100% honest I don’t think agency environment could provide much playground for practising  new technologies to solve problems critical to the core business - to give an example, we can’t answer the basic question on how much we should split the spend among offline / online marketing channels, simply because we don’t have the holistic perspective of the business and don’t own the data.</p>
+
+<h2 id="still-on-the-way">Still on the way</h2>
+
+<p>So this year I gave myself a career break for enrichment academically, while also on the lookout for opportunities that can productize insights from data.</p>
+
+<p>At the beginning of this year I was closing off the courses that I signed up before (but never finished) with DataCamp, Udacity and edx. Those courses definitely gave me great tips in how to use the essential toolbox of a data scientist. I’d strongly recommend whoever interested taking up <a href="https://www.datacamp.com/courses/intermediate-sql">DataCamp’s SQL course</a>, <a href="https://www.udacity.com/course/data-analyst-nanodegree--nd002">Udacity’s Data Analyst Nanodegree</a> and <a href="https://www.coursera.org/learn/analytics-tableau/home/welcome">coursera’s Data Visualization</a> course as an introduction to analytics. Thereafter, I joined General Assembly’s Data Science Immersive bootcamp to gain a structured understanding of the machine learning algorithms and to get familiarized with the deep learning frameworks. Now I have graduated from the course and the biggest three takeaways I had are: 1) formed a habit of learning something new everyday; 2) knew a good bunch of friends with whom I can exchange interesting topics; 3) got hands-on practice on a few projects applying newly learned skills including Regression Modeling, NLP, CNN etc.</p>
+
+<hr />
+
+<p>This has come to an end of my reflection.
+Learning never ends and I am still just scratching the surface. 
+Let’s KEEP THE GAME ON!</p>]]></content><author><name>yubin</name></author><category term="blog" /><category term="reflection" /><summary type="html"><![CDATA[Test]]></summary></entry><entry><title type="html">Reflection On My Career Track</title><link href="http://localhost:4000/Reflection-On-My-Career-Track/" rel="alternate" type="text/html" title="Reflection On My Career Track" /><published>2019-08-13T14:10:00+08:00</published><updated>2019-08-13T14:10:00+08:00</updated><id>http://localhost:4000/Reflection-On-My-Career-Track</id><content type="html" xml:base="http://localhost:4000/Reflection-On-My-Career-Track/"><![CDATA[<p>It has been almost 10 years after I graduated from university, so I think it’s a good time to take a look-back and reflect what I have seen, experienced and accomplished.</p>
+
+<hr />
+
+<h2 id="after-graduation">After Graduation</h2>
+
+<p>Fresh out of school I had problems finding the right job. Personally I think the global economic downturn played a big part back then, when the subprime mortgage crisis spread to Singapore and there were not many job openings in the market. As a result I landed on a job not related to my degree - it was a role in financial printing sector. On that job I was managing a bunch of clients and attended to their printing needs everyday, specifically on the legal document requirements. Though it was not a very technical role, I am happy that I got a side-view of the finance industry and learnt how to put myself in others’ shoes and how to manage multiple projects in parallel without missing any deadlines or raising any conflicts.</p>
+
+<p>After a short stint there, I decided to move on and started looking for engineering jobs again as I was not satisfied with my personal growth in the ‘hard’ skillset. (By nature I am still a person who likes to learn, talk and build stuff instead of relaying information from one party to another.)</p>
+
+<h2 id="engineering">Engineering</h2>
+
+<p>I then spent 6 years in semiconductor industry dealing with manufacturing process of microchips. I love my work there where I applied statistical analysis to troubleshoot / optimize the manufacturing process and equipments so as to maximize product yield and quality. The tools I used back then were more ‘proprietary’ and a bit different from the newest applications / libraries widely recognized these days; but the key concepts and frameworks are essentially built on the same thing. I used JMP as well as in-house software to design experiments and analyse results, used SQL to extract lots (a lot is a batch of &lt;=25 wafers in the manufacturing line) history and also used Tableau to report results to leadership.</p>
+
+<p>Day by day I realized that the part that I enjoyed the most (and also the core) of my job is turning data into a story that can be easily understood by my audience, be it the manufacturing team, the planning team or my best friends - engineering team. How to use the least words to tell a concise and effective story that drives actions is the skill that I’d like to continue practising in the rest of my professional life.</p>
+
+<p>At the same time, I saw opportunities blooming in the data science field which was also the driving force of the prospering semiconductor market. Large computing power became indispensable to almost all companies (or even at individual level) to be able to catch up with the growing speed of others. Rather than producing the ‘crops’ to power up the intelligence of other companies / individuals, I found myself also inclined to step into that field - what can I do to unleash the power of data to make an impact to the organization?</p>
+
+<p>I believe this is also definitely something that semiconductor industry is moving towards - smart manufacturing, if well designed and implemented at large scale, could win company great advantages in producing high quality products within shorter cycle time. However this job is easier said than done - particularly in semiconductor business. First among all the complex reasons is the IP issue of manufacturing process and equipments which involve multiple up/down-stream stakeholders; and no one plays a small role here. This has decreed that the data must be managed by a centralized group of authorized and highly skilled personnel; in consequence, data democritization and knowledge sharing is probably something that’s never going to be rolled out to the wider engineering team. There is definitely entry barrier to learn data science skills on the job (but trained professionals are very welcomed I believe).</p>
+
+<h2 id="digital-advertising">Digital Advertising</h2>
+
+<p>I turned my eyes elsewhere - it’s natural that internet company should be my next choice. Why? These companies are built upon the principles of openness and forward thinking so it matches with my goal of keeping updating my skillset in data science. Digital advertising, in particular, has caught my attention. I have read a bit on this and was amazed by the ecosystem and the mechanism of online ads buying/selling. It is really fascinating how fast this business is growing with ever-evolving technologies backing up every piece of it. I’m glad that I managed to land on an analytics role in a leading agency in this field, where I garnered skills in data ETL (extract, tranform and load) flow, experienced cloud computing on GCP (Google Cloud Platform) and AWS (Amazon Web Services) and also got hands-on in writing Python and R scripts to answer measurement questions. I enjoyed this learning process very much, as I was able to pick up new tools to solve business problems that see results quickly.</p>
+
+<p>For example, I applied A/B testing in creative studies to explore various messaging approaches and was able to find that seasonal messaging would be much more effective in raising search interest than a general one. This saved efforts from clients in generating and spending on the less effective creatives. I also managed to prove statistically the value of the digital portion of a campaign by applying the <a href="https://rdrr.io/cran/MarketMatching/man/MarketMatching.html">MarketingMatching</a> R package. This helped convince the clients in scaling up the digital spend in the future campaigns.</p>
+
+<p>This way I’ve got to deal with data generated by humans and come up with insights about user behaviors that can later drive business decisions. I love this process.</p>
+
+<p>There is only one reason for me to leave my last job - I want to turn data into products that can bring greater benefits to the organization.  To be 100% honest I don’t think agency environment could provide much playground for practising  new technologies to solve problems critical to the core business - to give an example, we can’t answer the basic question on how much we should split the spend among offline / online marketing channels, simply because we don’t have the holistic perspective of the business and don’t own the data.</p>
+
+<h2 id="still-on-the-way">Still on the way</h2>
+
+<p>So this year I gave myself a career break for enrichment academically, while also on the lookout for opportunities that can productize insights from data.</p>
+
+<p>At the beginning of this year I was closing off the courses that I signed up before (but never finished) with DataCamp, Udacity and edx. Those courses definitely gave me great tips in how to use the essential toolbox of a data scientist. I’d strongly recommend whoever interested taking up <a href="https://www.datacamp.com/courses/intermediate-sql">DataCamp’s SQL course</a>, <a href="https://www.udacity.com/course/data-analyst-nanodegree--nd002">Udacity’s Data Analyst Nanodegree</a> and <a href="https://www.coursera.org/learn/analytics-tableau/home/welcome">coursera’s Data Visualization</a> course as an introduction to analytics. Thereafter, I joined General Assembly’s Data Science Immersive bootcamp to gain a structured understanding of the machine learning algorithms and to get familiarized with the deep learning frameworks. Now I have graduated from the course and the biggest three takeaways I had are: 1) formed a habit of learning something new everyday; 2) knew a good bunch of friends with whom I can exchange interesting topics; 3) got hands-on practice on a few projects applying newly learned skills including Regression Modeling, NLP, CNN etc.</p>
+
+<hr />
+
+<p>This has come to an end of my reflection.
+Learning never ends and I am still just scratching the surface. 
+Let’s KEEP THE GAME ON!</p>]]></content><author><name>yubin</name></author><category term="blog" /><category term="reflection" /><summary type="html"><![CDATA[Murmuring about my experience]]></summary></entry><entry><title type="html">Fashion Recommender based on Image Similarity with Deep Learning</title><link href="http://localhost:4000/Fashion-Recommender/" rel="alternate" type="text/html" title="Fashion Recommender based on Image Similarity with Deep Learning" /><published>2019-07-31T22:10:00+08:00</published><updated>2019-07-31T22:10:00+08:00</updated><id>http://localhost:4000/Fashion-Recommender</id><content type="html" xml:base="http://localhost:4000/Fashion-Recommender/"><![CDATA[<p>See the <a href="https://github.com/yubin627/ga_projects/tree/master/Capstone_Project/codes">codes</a></p>
+
+<p>Check out the <a href="https://deepfashion-finder.herokuapp.com/">app</a></p>
+
+<hr />
+
+<p>When it comes to what to wear, I often need inspiration from what is around me - it could be from Instagram photos or some passers-by I spotted on the street. For an avid online (almost exclusively) shopper like me, I would start browsing immediately on the websites if I see something that I like, but it has been quite a challenge for me to find the exact words to describe the items accurately in the search bar. </p>
+
+<p>Image search engine is an answer to my problem. In reality it has already become a prevalent product feature on the major e-commerce sites these days. For myself as a beginner just starting the learning journey in deep learnnig, I am very intrigued to get some hands-on and better understanding of the algorithms under the hood.</p>
+
+<h2 id="goal">Goal</h2>
+
+<p>My goal would be to build a search engine based on image similarity for clothing recommendation. 
+Essentially the workflow consists of three steps:</p>
+<ol>
+  <li>Modeling</li>
+  <li>Feature extraction</li>
+  <li>Image retrieval</li>
+</ol>
+
+<p>Following this workflow, there are a few points to consider:</p>
+<ul>
+  <li>Can shallow CNN handle this task?</li>
+  <li>If not, which pre-trained model works the best, in terms of accuracy and training time?</li>
+  <li>How to extract the feature vectors (or embeddings) to capture most of the information contained in the images?</li>
+  <li>Given a large dataset (130k images in this project), what is the optimal algorithm for image retrieval?</li>
+</ul>
+
+<h2 id="set-up">Set-Up</h2>
+<h3 id="dataset">Dataset</h3>
+
+<p>I used the <a href="http://mmlab.ie.cuhk.edu.hk/projects/DeepFashion.html">DeepFashion Attribute Prediction Dataset</a> that has been meticulously gathered and labeled by the The Multimedia Laboratory at the Chinese University of Hong Kong.</p>
+
+<p>In total it contains over 800,000 diverse fashion images with 50 categories ranging from well-posed shop images to unconstrained consumer photos. Due to limitation of computation resources and time, I only used the upper body clothes images in this project, which contains 139,709 images from 20 categories (please refer to category_label in Anno/list_category_img.txt in the dataset).</p>
+
+<p>As shown below is the data folder structure.</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">├── img
+│   ├── img_subfolder_1
+│   ├── ...
+│   └── img_subfolder_n
+├── Anno
+│   ├── list_bbox.txt
+│   ├── list_category_cloth.txt
+│   └── list_category_img.txt
+└── Eval
+    └── list_eval_partition.txt</code></pre></figure>
+
+<h3 id="hardware--environment">Hardware &amp; Environment</h3>
+
+<p>I trained the model on floydhub for its user-friendly set-up process. The configuration is as follows:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Instance</th>
+      <th style="text-align: left">Docker Image</th>
+      <th style="text-align: left">torchvision</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">GPU</td>
+      <td style="text-align: left">floydhub/pytorch:1.0.1-gpu.cuda9cudnn7-py3.42</td>
+      <td style="text-align: left">install 0.3</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="data-preprocessing">Data Preprocessing</h2>
+
+<h3 id="preparing-dataset">Preparing Dataset</h3>
+<p>PyTorch DataLoaders are objects that act as Python generators. They supply data in chunks or batches while training and validation. We can instantiate DataLoader objects and pass our datasets to them. DataLoaders store the dataset objects internally.</p>
+
+<p>When the application asks for the next batch of data, a DataLoader uses its stored dataset as a Python iterator to get the next element (row or image in our case) of data. Then it aggregates a batch worth of data and returns it to the application.</p>
+
+<p>The following is a snippet of the codes that I used to create the training dataset containing the cropped images and the target variable. Click the triangle to expand the code block:</p>
+
+<details>
+<summary>
+<i>dataset class to prepare train/test/all set</i>
+</summary>
+<p>
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">class</span> <span class="nc">Fashion_attr_prediction</span><span class="p">(</span><span class="n">data</span><span class="p">.</span><span class="n">Dataset</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s">"train"</span><span class="p">,</span> <span class="n">transform</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">target_transform</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">crop</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">img_path</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">transform</span> <span class="o">=</span> <span class="n">transform</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">target_transform</span> <span class="o">=</span> <span class="n">target_transform</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">crop</span> <span class="o">=</span> <span class="n">crop</span>
+        <span class="c1"># type_all = ["train", "test", "all", "triplet"]
+</span>        <span class="bp">self</span><span class="p">.</span><span class="nb">type</span> <span class="o">=</span> <span class="nb">type</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">train_list</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">train_dict</span> <span class="o">=</span> <span class="p">{</span><span class="n">i</span><span class="p">:</span> <span class="p">[]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">CATEGORIES</span><span class="p">)}</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">test_list</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">all_list</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">bbox</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">anno</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">read_partition_category</span><span class="p">()</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">read_bbox</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">__len__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="p">.</span><span class="nb">type</span> <span class="o">==</span> <span class="s">"all"</span><span class="p">:</span>
+            <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">all_list</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="bp">self</span><span class="p">.</span><span class="nb">type</span> <span class="o">==</span> <span class="s">"train"</span><span class="p">:</span>
+            <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">train_list</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="bp">self</span><span class="p">.</span><span class="nb">type</span> <span class="o">==</span> <span class="s">"test"</span><span class="p">:</span>
+            <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">test_list</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="mi">1</span>
+
+    <span class="k">def</span> <span class="nf">read_partition_category</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1">#print("current directory"+os.getcwd()) #testing
+</span>        <span class="n">list_eval_partition</span> <span class="o">=</span> <span class="n">os</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="n">join</span><span class="p">(</span><span class="n">DATASET_BASE</span><span class="p">,</span> <span class="sa">r</span><span class="s">'Eval'</span><span class="p">,</span> <span class="sa">r</span><span class="s">'list_eval_partition.txt'</span><span class="p">)</span>
+        <span class="n">list_category_img</span> <span class="o">=</span> <span class="n">os</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="n">join</span><span class="p">(</span><span class="n">DATASET_BASE</span><span class="p">,</span> <span class="sa">r</span><span class="s">'Anno'</span><span class="p">,</span> <span class="sa">r</span><span class="s">'list_category_img.txt'</span><span class="p">)</span>
+        <span class="n">partition_pairs</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">read_lines</span><span class="p">(</span><span class="n">list_eval_partition</span><span class="p">)</span>
+        <span class="n">category_img_pairs</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">read_lines</span><span class="p">(</span><span class="n">list_category_img</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">category_img_pairs</span><span class="p">:</span>
+            <span class="n">v</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">v</span> <span class="o">&lt;=</span> <span class="mi">20</span><span class="p">:</span>
+                <span class="bp">self</span><span class="p">.</span><span class="n">anno</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">v</span> <span class="o">-</span> <span class="mi">1</span>
+        <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">partition_pairs</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">k</span> <span class="ow">in</span> <span class="bp">self</span><span class="p">.</span><span class="n">anno</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">v</span> <span class="o">==</span> <span class="s">"train"</span><span class="p">:</span>
+                    <span class="bp">self</span><span class="p">.</span><span class="n">train_list</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">k</span><span class="p">)</span>
+                    <span class="bp">self</span><span class="p">.</span><span class="n">train_dict</span><span class="p">[</span><span class="bp">self</span><span class="p">.</span><span class="n">anno</span><span class="p">[</span><span class="n">k</span><span class="p">]].</span><span class="n">append</span><span class="p">(</span><span class="n">k</span><span class="p">)</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="c1"># Test and Val
+</span>                    <span class="bp">self</span><span class="p">.</span><span class="n">test_list</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">k</span><span class="p">)</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">all_list</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">test_list</span> <span class="o">+</span> <span class="bp">self</span><span class="p">.</span><span class="n">train_list</span>
+        <span class="n">random</span><span class="p">.</span><span class="n">shuffle</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">train_list</span><span class="p">)</span>
+        <span class="n">random</span><span class="p">.</span><span class="n">shuffle</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">test_list</span><span class="p">)</span>
+        <span class="n">random</span><span class="p">.</span><span class="n">shuffle</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">all_list</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">read_bbox</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">list_bbox</span> <span class="o">=</span> <span class="n">os</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="n">join</span><span class="p">(</span><span class="n">DATASET_BASE</span><span class="p">,</span> <span class="sa">r</span><span class="s">'Anno'</span><span class="p">,</span> <span class="sa">r</span><span class="s">'list_bbox.txt'</span><span class="p">)</span>
+        <span class="n">pairs</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">read_lines</span><span class="p">(</span><span class="n">list_bbox</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">x1</span><span class="p">,</span> <span class="n">y1</span><span class="p">,</span> <span class="n">x2</span><span class="p">,</span> <span class="n">y2</span> <span class="ow">in</span> <span class="n">pairs</span><span class="p">:</span>
+            <span class="bp">self</span><span class="p">.</span><span class="n">bbox</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">x1</span><span class="p">,</span> <span class="n">y1</span><span class="p">,</span> <span class="n">x2</span><span class="p">,</span> <span class="n">y2</span><span class="p">]</span>
+
+    <span class="k">def</span> <span class="nf">read_lines</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">):</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">)</span> <span class="k">as</span> <span class="n">fin</span><span class="p">:</span>
+            <span class="n">lines</span> <span class="o">=</span> <span class="n">fin</span><span class="p">.</span><span class="n">readlines</span><span class="p">()[</span><span class="mi">2</span><span class="p">:]</span>
+            <span class="n">lines</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">,</span> <span class="n">lines</span><span class="p">))</span>
+            <span class="n">pairs</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">.</span><span class="n">strip</span><span class="p">().</span><span class="n">split</span><span class="p">(),</span> <span class="n">lines</span><span class="p">))</span>
+        <span class="k">return</span> <span class="n">pairs</span>
+
+    <span class="k">def</span> <span class="nf">read_crop</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">img_path</span><span class="p">):</span>
+        <span class="n">img_full_path</span> <span class="o">=</span> <span class="n">os</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="n">join</span><span class="p">(</span><span class="n">DATASET_BASE</span><span class="p">,</span> <span class="n">img_path</span><span class="p">)</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">img_full_path</span><span class="p">,</span> <span class="s">'rb'</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+            <span class="k">with</span> <span class="n">Image</span><span class="p">.</span><span class="nb">open</span><span class="p">(</span><span class="n">f</span><span class="p">)</span> <span class="k">as</span> <span class="n">img</span><span class="p">:</span>
+                <span class="n">img</span> <span class="o">=</span> <span class="n">img</span><span class="p">.</span><span class="n">convert</span><span class="p">(</span><span class="s">'RGB'</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="p">.</span><span class="n">crop</span><span class="p">:</span>
+            <span class="n">x1</span><span class="p">,</span> <span class="n">y1</span><span class="p">,</span> <span class="n">x2</span><span class="p">,</span> <span class="n">y2</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">bbox</span><span class="p">[</span><span class="n">img_path</span><span class="p">]</span>
+            <span class="k">if</span> <span class="n">x1</span> <span class="o">&lt;</span> <span class="n">x2</span> <span class="o">&lt;=</span> <span class="n">img</span><span class="p">.</span><span class="n">size</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="ow">and</span> <span class="n">y1</span> <span class="o">&lt;</span> <span class="n">y2</span> <span class="o">&lt;=</span> <span class="n">img</span><span class="p">.</span><span class="n">size</span><span class="p">[</span><span class="mi">1</span><span class="p">]:</span>
+                <span class="n">img</span> <span class="o">=</span> <span class="n">img</span><span class="p">.</span><span class="n">crop</span><span class="p">((</span><span class="n">x1</span><span class="p">,</span> <span class="n">y1</span><span class="p">,</span> <span class="n">x2</span><span class="p">,</span> <span class="n">y2</span><span class="p">))</span>
+        <span class="k">return</span> <span class="n">img</span>
+
+    <span class="k">def</span> <span class="nf">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">index</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="p">.</span><span class="nb">type</span> <span class="o">==</span> <span class="s">"triplet"</span><span class="p">:</span>
+            <span class="n">img_path</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">train_list</span><span class="p">[</span><span class="n">index</span><span class="p">]</span>
+            <span class="n">target</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">anno</span><span class="p">[</span><span class="n">img_path</span><span class="p">]</span>
+            <span class="n">img_p</span> <span class="o">=</span> <span class="n">random</span><span class="p">.</span><span class="n">choice</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">train_dict</span><span class="p">[</span><span class="n">target</span><span class="p">])</span>
+            <span class="n">img_n</span> <span class="o">=</span> <span class="n">random</span><span class="p">.</span><span class="n">choice</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">train_dict</span><span class="p">[</span><span class="n">random</span><span class="p">.</span><span class="n">choice</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span> <span class="o">!=</span> <span class="n">target</span><span class="p">,</span> <span class="nb">range</span><span class="p">(</span><span class="mi">20</span><span class="p">))))])</span>
+            <span class="n">img</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">read_crop</span><span class="p">(</span><span class="n">img_path</span><span class="p">)</span>
+            <span class="n">img_p</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">read_crop</span><span class="p">(</span><span class="n">img_p</span><span class="p">)</span>
+            <span class="n">img_n</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">read_crop</span><span class="p">(</span><span class="n">img_n</span><span class="p">)</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="p">.</span><span class="n">transform</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+                <span class="n">img</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">transform</span><span class="p">(</span><span class="n">img</span><span class="p">)</span>
+                <span class="n">img_p</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">transform</span><span class="p">(</span><span class="n">img_p</span><span class="p">)</span>
+                <span class="n">img_n</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">transform</span><span class="p">(</span><span class="n">img_n</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">img</span><span class="p">,</span> <span class="n">img_p</span><span class="p">,</span> <span class="n">img_n</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="p">.</span><span class="nb">type</span> <span class="o">==</span> <span class="s">"all"</span><span class="p">:</span>
+            <span class="n">img_path</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">all_list</span><span class="p">[</span><span class="n">index</span><span class="p">]</span>
+        <span class="k">elif</span> <span class="bp">self</span><span class="p">.</span><span class="nb">type</span> <span class="o">==</span> <span class="s">"train"</span><span class="p">:</span>
+            <span class="n">img_path</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">train_list</span><span class="p">[</span><span class="n">index</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">img_path</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">test_list</span><span class="p">[</span><span class="n">index</span><span class="p">]</span>
+        <span class="n">target</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">anno</span><span class="p">[</span><span class="n">img_path</span><span class="p">]</span>
+        <span class="n">img</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">read_crop</span><span class="p">(</span><span class="n">img_path</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="p">.</span><span class="n">transform</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="n">img</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">transform</span><span class="p">(</span><span class="n">img</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="p">.</span><span class="n">target_transform</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="n">target</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">target_transform</span><span class="p">(</span><span class="n">target</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">img</span><span class="p">,</span> <span class="n">img_path</span> <span class="k">if</span> <span class="bp">self</span><span class="p">.</span><span class="nb">type</span> <span class="o">==</span> <span class="s">"all"</span> <span class="k">else</span> <span class="n">target</span></code></pre></figure>
+ 
+</p>
+</details>
+<p>Here I created a class to prepare the dataset object. There are various options (self.type) created to cater for the needs of training and feature extraction later. To be more specific, <code class="language-plaintext highlighter-rouge">train/test</code> data will be used for training the model; <code class="language-plaintext highlighter-rouge">all</code> will be used for feature extraction, <code class="language-plaintext highlighter-rouge">triplet</code> will be used to generate triplet margin loss function for the backpropagation. More on loss function later.</p>
+
+<h3 id="preprocessing-and-data-augmentation">Preprocessing and Data Augmentation</h3>
+<p>One more step before we move on to defining our network and start training - we need to preprocess our datasets. Specifically, this incluces Resizing, Data Augmentation, Conversion to PyTorch Tensors and Normalizing.</p>
+
+<details>
+<summary>
+<i>preprocessing</i>
+</summary>
+<p>
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">data_transform_train</span> <span class="o">=</span> <span class="n">transforms</span><span class="p">.</span><span class="n">Compose</span><span class="p">([</span>
+    <span class="n">transforms</span><span class="p">.</span><span class="n">Resize</span><span class="p">(</span><span class="n">IMG_SIZE</span><span class="p">),</span> <span class="c1">#224*224
+</span>    <span class="n">transforms</span><span class="p">.</span><span class="n">RandomResizedCrop</span><span class="p">(</span><span class="n">CROP_SIZE</span><span class="p">),</span>  <span class="c1">#224
+</span>    <span class="n">transforms</span><span class="p">.</span><span class="n">RandomHorizontalFlip</span><span class="p">(),</span>
+    <span class="n">transforms</span><span class="p">.</span><span class="n">ToTensor</span><span class="p">(),</span>
+    <span class="n">transforms</span><span class="p">.</span><span class="n">Normalize</span><span class="p">([</span><span class="mf">0.485</span><span class="p">,</span> <span class="mf">0.456</span><span class="p">,</span> <span class="mf">0.406</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.229</span><span class="p">,</span> <span class="mf">0.224</span><span class="p">,</span> <span class="mf">0.225</span><span class="p">])</span> <span class="c1">#ImageNet's mean/std parameters
+</span>    <span class="p">])</span>
+
+<span class="n">data_transform_test</span> <span class="o">=</span> <span class="n">transforms</span><span class="p">.</span><span class="n">Compose</span><span class="p">([</span>
+    <span class="n">transforms</span><span class="p">.</span><span class="n">Resize</span><span class="p">(</span><span class="n">CROP_SIZE</span><span class="p">),</span>
+    <span class="n">transforms</span><span class="p">.</span><span class="n">CenterCrop</span><span class="p">(</span><span class="n">CROP_SIZE</span><span class="p">),</span>
+    <span class="n">transforms</span><span class="p">.</span><span class="n">ToTensor</span><span class="p">(),</span>
+    <span class="n">transforms</span><span class="p">.</span><span class="n">Normalize</span><span class="p">([</span><span class="mf">0.485</span><span class="p">,</span> <span class="mf">0.456</span><span class="p">,</span> <span class="mf">0.406</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.229</span><span class="p">,</span> <span class="mf">0.224</span><span class="p">,</span> <span class="mf">0.225</span><span class="p">])</span>
+    <span class="p">])</span></code></pre></figure>
+ 
+</p>
+</details>
+
+<p>Now we can instantiate the class to create the data loader objects as shown in the snippets below.</p>
+<details>
+<summary>
+<i>dataloader objects</i>
+</summary>
+<p>
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="c1">#Refer to config.py for the settings on batch size and number of workers
+</span><span class="n">train_loader</span> <span class="o">=</span> <span class="n">torch</span><span class="p">.</span><span class="n">utils</span><span class="p">.</span><span class="n">data</span><span class="p">.</span><span class="n">DataLoader</span><span class="p">(</span>
+    <span class="n">Fashion_attr_prediction</span><span class="p">(</span><span class="nb">type</span><span class="o">=</span><span class="s">"train"</span><span class="p">,</span> <span class="n">transform</span><span class="o">=</span><span class="n">data_transform_train</span><span class="p">),</span>
+    <span class="n">batch_size</span><span class="o">=</span><span class="n">TRAIN_BATCH_SIZE</span><span class="p">,</span> <span class="n">num_workers</span><span class="o">=</span><span class="n">NUM_WORKERS</span><span class="p">,</span> <span class="n">pin_memory</span><span class="o">=</span><span class="bp">True</span>
+<span class="p">)</span>
+
+<span class="n">test_loader</span> <span class="o">=</span> <span class="n">torch</span><span class="p">.</span><span class="n">utils</span><span class="p">.</span><span class="n">data</span><span class="p">.</span><span class="n">DataLoader</span><span class="p">(</span>
+    <span class="n">Fashion_attr_prediction</span><span class="p">(</span><span class="nb">type</span><span class="o">=</span><span class="s">"test"</span><span class="p">,</span> <span class="n">transform</span><span class="o">=</span><span class="n">data_transform_test</span><span class="p">),</span>
+    <span class="n">batch_size</span><span class="o">=</span><span class="n">TEST_BATCH_SIZE</span><span class="p">,</span> <span class="n">num_workers</span><span class="o">=</span><span class="n">NUM_WORKERS</span><span class="p">,</span> <span class="n">pin_memory</span><span class="o">=</span><span class="bp">True</span>
+<span class="p">)</span>
+
+<span class="c1"># For calculating triplet margin loss    
+</span><span class="n">triplet_loader</span> <span class="o">=</span> <span class="n">torch</span><span class="p">.</span><span class="n">utils</span><span class="p">.</span><span class="n">data</span><span class="p">.</span><span class="n">DataLoader</span><span class="p">(</span>
+    <span class="n">Fashion_attr_prediction</span><span class="p">(</span><span class="nb">type</span><span class="o">=</span><span class="s">"triplet"</span><span class="p">,</span> <span class="n">transform</span><span class="o">=</span><span class="n">data_transform_train</span><span class="p">),</span>
+    <span class="n">batch_size</span><span class="o">=</span><span class="n">TRIPLET_BATCH_SIZE</span><span class="p">,</span> <span class="n">num_workers</span><span class="o">=</span><span class="n">NUM_WORKERS</span><span class="p">,</span> <span class="n">pin_memory</span><span class="o">=</span><span class="bp">True</span>
+<span class="p">)</span></code></pre></figure>
+ 
+</p>
+</details>
+
+<h2 id="modeling">Modeling</h2>
+<h3 id="shallow-cnn-modeling">Shallow CNN Modeling</h3>
+<p>I had an attempt on a shallow network with 3 layers and was only able to achieve 41% accuracy. This is understandable since 3 layers could possibly only detect basic patterns (circles, grids etc.) but would not be able to take care of the complexities of clothing.</p>
+
+<h3 id="modeling-with-transfer-learning">Modeling with Transfer Learning</h3>
+
+<p>Here I used <a href="https://arxiv.org/abs/1512.03385">ResNet-50</a> pretrained on ImageNet dataset as my base architectures due to its proved benchmark performance in accuracy and training time (see <a href="https://dawn.cs.stanford.edu/benchmark/">Stanford University’s DAWNBench</a>). I also had an attempt on <a href="https://arxiv.org/abs/1611.05431">ResNeXt-50</a> due to its reportedly <a href="https://github.com/facebookresearch/ResNeXt">higher accuracy</a> but at the point of writing the training speed to comparable accuracy is much slower than (~0.6x) ResNet-50 on my current hardware. As future work, I will play with fine-tuning of the ResNeXt version.</p>
+
+<p>With transfer learning, I froze the architecture and weights from all the layers up till the last two - pooling and fully connected (FC) layers and fine tuned these two. This way I don’t need to train the whole CNN from scrach (which is also not necessary since ImageNet that the model is pretrained on is quite versatile - it covers &gt;1M images spanning 1000 categories). Here is a great visualization showing the building blocks of <a href="http://ethereon.github.io/netscope/#/gist/db945b393d40bfa26006">ResNet-50 architecture</a>.</p>
+
+<p>Instead of outputing to a 1000-d FC layer, I took the output of pooling layer to 2 FC layers in sequence, with the first one being a 512-d vector for feature extraction purpose later on, and the second being a 20-d vector for image classification (recall that I am only using 20 categories in the dataset).</p>
+
+<p>The weights of the last two layers are trained using a combination of <a href="https://ml-cheatsheet.readthedocs.io/en/latest/loss_functions.html">Cross Entropy</a> and <a href="https://www.coursera.org/lecture/convolutional-neural-networks/triplet-loss-HuUtN?utm_source=linkshare&amp;siteID=je6NUbpObpQ-v1d8hWFJabwDXRzs0wbHQg&amp;ranEAID=je6NUbpObpQ&amp;utm_content=10&amp;ranMID=40328&amp;ranSiteID=je6NUbpObpQ-v1d8hWFJabwDXRzs0wbHQg&amp;utm_campaign=je6NUbpObpQ&amp;utm_medium=partners">Triplet Margin Loss</a> function and Stochastic Gradient Descent optimizer.</p>
+
+<p>See below for the snippet of the codes on the model adjustment:</p>
+<details>
+<summary>
+<i>model constructor used for transfer learning</i>
+</summary>
+<p>
+<figure class="highlight"><pre><code class="language-python" data-lang="python">    
+<span class="c1"># Refer to config.py file for the settings on INTER_DIM, CATEGORIES, learning rate and momentum
+</span><span class="k">class</span> <span class="nc">f_model</span><span class="p">(</span><span class="n">nn</span><span class="p">.</span><span class="n">Module</span><span class="p">):</span>
+    <span class="s">'''
+    input: N * 3 * 224 * 224
+    output: N * num_classes (20), N * inter_dim (512), N * C' (2048) * 7 * 7
+    '''</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">freeze_param</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">inter_dim</span><span class="o">=</span><span class="n">INTER_DIM</span><span class="p">,</span> <span class="n">num_classes</span><span class="o">=</span><span class="n">CATEGORIES</span><span class="p">,</span> <span class="n">model_path</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">f_model</span><span class="p">,</span> <span class="bp">self</span><span class="p">).</span><span class="n">__init__</span><span class="p">()</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">backbone</span> <span class="o">=</span> <span class="n">models</span><span class="p">.</span><span class="n">resnext50_32x4d</span><span class="p">(</span><span class="n">pretrained</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+        <span class="n">state_dict</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">backbone</span><span class="p">.</span><span class="n">state_dict</span><span class="p">()</span>
+        <span class="n">num_features</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">backbone</span><span class="p">.</span><span class="n">fc</span><span class="p">.</span><span class="n">in_features</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">backbone</span> <span class="o">=</span> <span class="n">nn</span><span class="p">.</span><span class="n">Sequential</span><span class="p">(</span><span class="o">*</span><span class="nb">list</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">backbone</span><span class="p">.</span><span class="n">children</span><span class="p">())[:</span><span class="o">-</span><span class="mi">2</span><span class="p">])</span>
+        <span class="n">model_dict</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">backbone</span><span class="p">.</span><span class="n">state_dict</span><span class="p">()</span>
+        <span class="n">model_dict</span><span class="p">.</span><span class="n">update</span><span class="p">({</span><span class="n">k</span><span class="p">:</span> <span class="n">v</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">state_dict</span><span class="p">.</span><span class="n">items</span><span class="p">()</span> <span class="k">if</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">model_dict</span><span class="p">})</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">backbone</span><span class="p">.</span><span class="n">load_state_dict</span><span class="p">(</span><span class="n">model_dict</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">freeze_param</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">param</span> <span class="ow">in</span> <span class="bp">self</span><span class="p">.</span><span class="n">backbone</span><span class="p">.</span><span class="n">parameters</span><span class="p">():</span>
+                <span class="n">param</span><span class="p">.</span><span class="n">requires_grad</span> <span class="o">=</span> <span class="bp">False</span>
+
+        <span class="bp">self</span><span class="p">.</span><span class="n">avg_pooling</span> <span class="o">=</span> <span class="n">nn</span><span class="p">.</span><span class="n">AvgPool2d</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="n">stride</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">fc</span> <span class="o">=</span> <span class="n">nn</span><span class="p">.</span><span class="n">Linear</span><span class="p">(</span><span class="n">num_features</span><span class="p">,</span> <span class="n">inter_dim</span><span class="p">)</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">fc2</span> <span class="o">=</span> <span class="n">nn</span><span class="p">.</span><span class="n">Linear</span><span class="p">(</span><span class="n">inter_dim</span><span class="p">,</span> <span class="n">num_classes</span><span class="p">)</span>
+        <span class="n">state</span> <span class="o">=</span> <span class="n">load_model</span><span class="p">(</span><span class="n">model_path</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">state</span><span class="p">:</span>
+            <span class="n">new_state</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">state_dict</span><span class="p">()</span>
+            <span class="n">new_state</span><span class="p">.</span><span class="n">update</span><span class="p">({</span><span class="n">k</span><span class="p">:</span> <span class="n">v</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">state</span><span class="p">.</span><span class="n">items</span><span class="p">()</span> <span class="k">if</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">new_state</span><span class="p">})</span>
+            <span class="bp">self</span><span class="p">.</span><span class="n">load_state_dict</span><span class="p">(</span><span class="n">new_state</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">backbone</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="n">pooled</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">avg_pooling</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="n">inter_out</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">fc</span><span class="p">(</span><span class="n">pooled</span><span class="p">.</span><span class="n">view</span><span class="p">(</span><span class="n">pooled</span><span class="p">.</span><span class="n">size</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span> <span class="o">-</span><span class="mi">1</span><span class="p">))</span>
+        <span class="n">out</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">fc2</span><span class="p">(</span><span class="n">inter_out</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">out</span><span class="p">,</span> <span class="n">inter_out</span><span class="p">,</span> <span class="n">x</span>
+    
+<span class="n">model</span> <span class="o">=</span> <span class="n">f_model</span><span class="p">(</span><span class="n">freeze_param</span><span class="o">=</span><span class="n">FREEZE_PARAM</span><span class="p">,</span> <span class="n">model_path</span><span class="o">=</span><span class="n">DUMPED_MODEL</span><span class="p">).</span><span class="n">cuda</span><span class="p">()</span>
+<span class="n">optimizer</span> <span class="o">=</span> <span class="n">optim</span><span class="p">.</span><span class="n">SGD</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">p</span><span class="p">:</span> <span class="n">p</span><span class="p">.</span><span class="n">requires_grad</span><span class="p">,</span> <span class="n">model</span><span class="p">.</span><span class="n">parameters</span><span class="p">()),</span> <span class="n">lr</span><span class="o">=</span><span class="n">LR</span><span class="p">,</span> <span class="n">momentum</span><span class="o">=</span><span class="n">MOMENTUM</span><span class="p">)</span></code></pre></figure>
+ 
+</p>
+</details>
+
+<h4 id="results">Results</h4>
+
+<p>Plot for training/test accuracy on ResNet-50 and ResNeXt-50
+<img src="/assets/images/resnet.png" alt="alt-text-1" title="resnet" /> <img src="/assets/images/resnext.png" alt="alt-text-2" title="resnext" /></p>
+
+<p>The train/test accuracy (top-1) reached 59%/68% for the ResNet-50 model. On ResNeXt-50, I stopped it at the 5th epoch as no further improvement is seen.</p>
+
+<h2 id="feature-extraction">Feature Extraction</h2>
+
+<p>I used the output of the second last fully connected layer as the embeddings, which are vectors of dimension (512, 1).</p>
+
+<p>See codes below for the feature extraction.</p>
+<details>
+<summary>
+<i>feature extractor</i>
+</summary>
+<p>
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">class</span> <span class="nc">FeatureExtractor</span><span class="p">(</span><span class="n">nn</span><span class="p">.</span><span class="n">Module</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">deep_module</span><span class="p">,</span> <span class="n">color_module</span><span class="p">,</span> <span class="n">pooling_module</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">FeatureExtractor</span><span class="p">,</span> <span class="bp">self</span><span class="p">).</span><span class="n">__init__</span><span class="p">()</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">deep_module</span> <span class="o">=</span> <span class="n">deep_module</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">deep_module</span><span class="p">.</span><span class="nb">eval</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+        <span class="n">cls</span><span class="p">,</span> <span class="n">feat</span><span class="p">,</span> <span class="n">conv_out</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">deep_module</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">feat</span><span class="p">.</span><span class="n">cpu</span><span class="p">().</span><span class="n">data</span><span class="p">.</span><span class="n">numpy</span><span class="p">()</span>
+
+<span class="n">main_model</span> <span class="o">=</span> <span class="n">f_model</span><span class="p">(</span><span class="n">model_path</span><span class="o">=</span><span class="n">DUMPED_MODEL</span><span class="p">).</span><span class="n">cuda</span><span class="p">()</span>   
+<span class="n">extractor</span> <span class="o">=</span> <span class="n">FeatureExtractor</span><span class="p">(</span><span class="n">main_model</span><span class="p">)</span>
+<span class="n">all_loader</span> <span class="o">=</span> <span class="n">torch</span><span class="p">.</span><span class="n">utils</span><span class="p">.</span><span class="n">data</span><span class="p">.</span><span class="n">DataLoader</span><span class="p">(</span>
+        <span class="n">Fashion_attr_prediction</span><span class="p">(</span><span class="nb">type</span><span class="o">=</span><span class="s">"all"</span><span class="p">,</span> <span class="n">transform</span><span class="o">=</span><span class="n">data_transform_test</span><span class="p">),</span>
+        <span class="n">batch_size</span><span class="o">=</span><span class="n">EXTRACT_BATCH_SIZE</span><span class="p">,</span> <span class="n">num_workers</span><span class="o">=</span><span class="n">NUM_WORKERS</span><span class="p">,</span> <span class="n">pin_memory</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">dump_dataset</span><span class="p">(</span><span class="n">loader</span><span class="p">,</span> <span class="n">deep_feats</span><span class="p">,</span> <span class="n">labels</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">batch_idx</span><span class="p">,</span> <span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">data_path</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">loader</span><span class="p">):</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="n">Variable</span><span class="p">(</span><span class="n">data</span><span class="p">).</span><span class="n">cuda</span><span class="p">()</span>
+        <span class="n">deep_feat</span> <span class="o">=</span> <span class="n">extractor</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">data_path</span><span class="p">)):</span>
+            <span class="n">path</span> <span class="o">=</span> <span class="n">data_path</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+            <span class="n">feature_n</span> <span class="o">=</span> <span class="n">deep_feat</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">squeeze</span><span class="p">()</span>
+            <span class="n">deep_feats</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">feature_n</span><span class="p">)</span>
+            <span class="n">labels</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">batch_idx</span> <span class="o">%</span> <span class="n">LOG_INTERVAL</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">print</span><span class="p">(</span><span class="s">"{} / {}"</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">batch_idx</span> <span class="o">*</span> <span class="n">EXTRACT_BATCH_SIZE</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">loader</span><span class="p">.</span><span class="n">dataset</span><span class="p">)))</span>
+    
+        <span class="n">feat_all</span> <span class="o">=</span> <span class="s">'/output/all_feat_pca.npy'</span>
+        <span class="n">feat_list</span> <span class="o">=</span> <span class="s">'/output/all_feat.list'</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">feat_list</span><span class="p">,</span> <span class="s">"w"</span><span class="p">)</span> <span class="k">as</span> <span class="n">fw</span><span class="p">:</span>
+            <span class="n">fw</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="s">"</span><span class="se">\n</span><span class="s">"</span><span class="p">.</span><span class="n">join</span><span class="p">(</span><span class="n">labels</span><span class="p">))</span>
+        <span class="n">np</span><span class="p">.</span><span class="n">save</span><span class="p">(</span><span class="n">feat_all</span><span class="p">,</span> <span class="n">np</span><span class="p">.</span><span class="n">vstack</span><span class="p">(</span><span class="n">deep_feats_reduced</span><span class="p">))</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">"Dumped to all_feat.npy and all_feat.list."</span><span class="p">)</span>  
+
+<span class="n">deep_feats</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">labels</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">dump_dataset</span><span class="p">(</span><span class="n">all_loader</span><span class="p">,</span> <span class="n">deep_feats</span><span class="p">,</span> <span class="n">labels</span><span class="p">)</span></code></pre></figure>
+ 
+</p>
+</details>
+
+<h2 id="image-retrieval">Image Retrieval</h2>
+<p>Now with the feature vector of all images available, it’s time to build a search function(s) to get similar images given an image input. I tried three approaches and compared the time taken in each method.
+The methods included:</p>
+
+<p><strong>A naive approach</strong> that computes the similarity score between the given image to every other image in the dataset and get the top-n images.</p>
+<details>
+<summary>
+<i>naive query</i>
+</summary>
+<p>
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">dump_single_feature</span><span class="p">(</span><span class="n">img_path</span><span class="p">):</span>
+    <span class="n">deep_feats</span><span class="p">,</span> <span class="n">labels</span> <span class="o">=</span> <span class="n">load_feat_db</span><span class="p">()</span>
+    
+    <span class="n">deep_feats</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">(</span><span class="n">deep_feats</span><span class="p">)</span>
+    <span class="n">labels</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">(</span><span class="n">labels</span><span class="p">)</span>
+    <span class="n">deep_feat</span> <span class="o">=</span> <span class="n">deep_feats</span><span class="p">[</span><span class="n">labels</span> <span class="o">==</span> <span class="n">img_path</span><span class="p">][</span><span class="mi">0</span><span class="p">,:]</span>
+
+    <span class="k">return</span> <span class="n">deep_feat</span>
+    
+<span class="k">def</span> <span class="nf">get_similarity</span><span class="p">(</span><span class="n">feature</span><span class="p">,</span> <span class="n">feats</span><span class="p">,</span> <span class="n">metric</span><span class="o">=</span><span class="s">'cosine'</span><span class="p">):</span>
+    <span class="n">dist</span> <span class="o">=</span> <span class="n">cdist</span><span class="p">(</span><span class="n">np</span><span class="p">.</span><span class="n">expand_dims</span><span class="p">(</span><span class="n">feature</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">),</span> <span class="n">feats</span><span class="p">,</span> <span class="n">metric</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">dist</span>  
+
+<span class="k">def</span> <span class="nf">get_top_n</span><span class="p">(</span><span class="n">dist</span><span class="p">,</span> <span class="n">labels</span><span class="p">,</span> <span class="n">retrieval_top_n</span><span class="p">):</span>
+    <span class="n">ind</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">argpartition</span><span class="p">(</span><span class="n">dist</span><span class="p">,</span> <span class="n">retrieval_top_n</span><span class="p">)[</span><span class="mi">0</span><span class="p">:</span><span class="n">retrieval_top_n</span><span class="p">]</span>
+    <span class="n">ret</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">zip</span><span class="p">([</span><span class="n">labels</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">ind</span><span class="p">],</span> <span class="n">dist</span><span class="p">[</span><span class="n">ind</span><span class="p">]))</span>
+    <span class="n">ret</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">ret</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">reverse</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">ret</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">ret</span>
+    
+<span class="k">def</span> <span class="nf">get_deep_top_n</span><span class="p">(</span><span class="n">features</span><span class="p">,</span> <span class="n">deep_feats</span><span class="p">,</span> <span class="n">labels</span><span class="p">,</span> <span class="n">retrieval_top_n</span><span class="o">=</span><span class="mi">5</span><span class="p">):</span>
+    <span class="n">deep_scores</span> <span class="o">=</span> <span class="n">get_similarity</span><span class="p">(</span><span class="n">features</span><span class="p">,</span> <span class="n">deep_feats</span><span class="p">,</span> <span class="n">DISTANCE_METRIC</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="n">results</span> <span class="o">=</span> <span class="n">get_top_n</span><span class="p">(</span><span class="n">deep_scores</span><span class="p">,</span> <span class="n">labels</span><span class="p">,</span> <span class="n">retrieval_top_n</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">results</span>
+    
+<span class="k">def</span> <span class="nf">naive_query</span><span class="p">(</span><span class="n">features</span><span class="p">,</span> <span class="n">deep_feats</span><span class="p">,</span> <span class="n">labels</span><span class="p">,</span> <span class="n">retrieval_top_n</span><span class="o">=</span><span class="mi">5</span><span class="p">):</span>
+    <span class="n">results</span> <span class="o">=</span> <span class="n">get_deep_color_top_n</span><span class="p">(</span><span class="n">features</span><span class="p">,</span> <span class="n">deep_feats</span><span class="p">,</span> <span class="n">labels</span><span class="p">,</span> <span class="n">retrieval_top_n</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">results</span>
+    
+<span class="n">feats</span><span class="p">,</span> <span class="n">labels</span> <span class="o">=</span> <span class="n">load_feat_db</span><span class="p">()</span>   
+<span class="n">f</span> <span class="o">=</span> <span class="n">dump_single_feature_npy</span><span class="p">(</span><span class="n">example</span><span class="p">)</span> 
+<span class="n">result</span> <span class="o">=</span> <span class="n">naive_query</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">feats</span><span class="p">,</span> <span class="n">labels</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+    </code></pre></figure>
+ 
+</p>
+</details>
+
+<p><strong>A K-Means approach</strong> that added an intermediate step to classify the images to a number of clusters (50 in my case) in the features space. The query would firstly look for the cluster, followed by similarity search within the cluster.</p>
+<details>
+<summary>
+<i>K-Means query</i>
+</summary>
+<p>
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">feats</span><span class="p">,</span> <span class="n">labels</span> <span class="o">=</span> <span class="n">load_feat_db</span><span class="p">()</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">KMeans</span><span class="p">(</span><span class="n">n_clusters</span><span class="o">=</span><span class="n">N_CLUSTERS</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">n_jobs</span><span class="o">=-</span><span class="mi">1</span><span class="p">).</span><span class="n">fit</span><span class="p">(</span><span class="n">feats</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">kmeans_query</span><span class="p">(</span><span class="n">clf</span><span class="p">,</span> <span class="n">features</span><span class="p">,</span> <span class="n">deep_feats</span><span class="p">,</span> <span class="n">labels</span><span class="p">,</span> <span class="n">retrieval_top_n</span><span class="o">=</span><span class="mi">5</span><span class="p">):</span>
+    <span class="n">label</span> <span class="o">=</span> <span class="n">clf</span><span class="p">.</span><span class="n">predict</span><span class="p">(</span><span class="n">features</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">reshape</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">features</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+    <span class="n">ind</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">where</span><span class="p">(</span><span class="n">clf</span><span class="p">.</span><span class="n">labels_</span> <span class="o">==</span> <span class="n">label</span><span class="p">)</span>
+    <span class="n">d_feats</span> <span class="o">=</span> <span class="n">deep_feats</span><span class="p">[</span><span class="n">ind</span><span class="p">]</span>
+    <span class="n">n_labels</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">(</span><span class="n">labels</span><span class="p">)[</span><span class="n">ind</span><span class="p">])</span>
+    <span class="n">results</span> <span class="o">=</span> <span class="n">get_deep_top_n</span><span class="p">(</span><span class="n">features</span><span class="p">,</span> <span class="n">d_feats</span><span class="p">,</span> <span class="n">n_labels</span><span class="p">,</span> <span class="n">retrieval_top_n</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">results</span></code></pre></figure>
+ 
+</p>
+</details>
+
+<p><strong>A PCA (Principal Component Analysis) approach</strong> that reduced dimensionality of the feature vectors. It appears that we could reduce the features from 512 to 30 to explain at least 90% of the variance.</p>
+<details>
+<summary>
+<i>PCA on feature vectors</i>
+</summary>
+<p>
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="c1">#Reduce dimensionality on deep features
+</span><span class="n">scaler</span> <span class="o">=</span> <span class="n">MinMaxScaler</span><span class="p">(</span><span class="n">feature_range</span><span class="o">=</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+<span class="n">feats_rescaled</span> <span class="o">=</span> <span class="n">scaler</span><span class="p">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">feats</span><span class="p">)</span>
+<span class="n">pca</span> <span class="o">=</span> <span class="n">PCA</span><span class="p">(</span><span class="n">n_components</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
+<span class="n">feats_reduced</span> <span class="o">=</span> <span class="n">pca</span><span class="p">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">feats_rescaled</span><span class="p">)</span>
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">feat_list</span><span class="p">,</span> <span class="s">"w"</span><span class="p">)</span> <span class="k">as</span> <span class="n">fw</span><span class="p">:</span>
+    <span class="n">fw</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="s">"</span><span class="se">\n</span><span class="s">"</span><span class="p">.</span><span class="n">join</span><span class="p">(</span><span class="n">labels</span><span class="p">))</span>
+<span class="n">np</span><span class="p">.</span><span class="n">save</span><span class="p">(</span><span class="n">feat_all</span><span class="p">,</span> <span class="n">np</span><span class="p">.</span><span class="n">vstack</span><span class="p">(</span><span class="n">feats_reduced</span><span class="p">))</span></code></pre></figure>
+ 
+</p>
+</details>
+
+<p>Comparing the retrieval time taken by these three approaches, PCA scored the top place. In addition to the improvement in algorithm time complexity, it also eases the burden on server in database loading, as the features data file is reduced from 286MB to 34MB
+<img src="/assets/images/retrieval-time.png" alt="alt-text-1" title="retrieval" />
+Therefore</p>
+
+<h2 id="deploying-the-model-on-a-web-interface">Deploying the model on a web interface</h2>
+
+<p>I built a simple <a href="https://deepfashion-finder.herokuapp.com/">web application</a> based on the search engine generated above. The front page looks like this:
+<img src="/assets/images/deepfashion-home.png" alt="alt-text-1" title="app homepage" />
+The app would firstly pick one image randomly from the upper wear dataset (139,709 images) within DeepFashion. You can refresh the page till you see an image that you like, and click the image to check out the results. 
+Have fun!</p>
+
+<p>See the <a href="https://github.com/yubin627/ga_projects/tree/master/Capstone_Project/app">codes</a> for the flask deployment.</p>
+
+<hr />
+<h2 id="additional-notes">Additional Notes</h2>
+
+<h3 id="features">Features</h3>
+<p>Color features</p>
+
+<p>I extracted the RGB information by average pooling the original 224<em>224</em>3 images to 7<em>7</em>3 tensors, and then took the 2048<em>7</em>7 last convolutional layer trained by the model and applied average pooling to get 7<em>7 matrices that captures coarse information about the images. Subsequently I used the positions of the maximum 10 values from the 7</em>7 matrix to extract 10<em>3 vectors from the image 7</em>7*3 tensors. This way tese feature vectors capture most of the color information.</p>
+
+<details>
+<summary>
+<i>color features generator</i>
+</summary>
+<p>
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">class</span> <span class="nc">c_model</span><span class="p">(</span><span class="n">nn</span><span class="p">.</span><span class="n">Module</span><span class="p">):</span>
+    <span class="s">'''
+    Extract color tensors from original images
+    input: N * C * 224 * 224
+    output: N * C * 7 * 7
+    '''</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pooling_size</span><span class="o">=</span><span class="mi">32</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">c_model</span><span class="p">,</span> <span class="bp">self</span><span class="p">).</span><span class="n">__init__</span><span class="p">()</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">pooling</span> <span class="o">=</span> <span class="n">nn</span><span class="p">.</span><span class="n">AvgPool2d</span><span class="p">(</span><span class="n">pooling_size</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="p">.</span><span class="n">pooling</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+<span class="k">class</span> <span class="nc">p_model</span><span class="p">(</span><span class="n">nn</span><span class="p">.</span><span class="n">Module</span><span class="p">):</span>
+    <span class="s">'''
+    Apply average pooling to obtain coarse information from 
+    the last conv layer
+    input: N * C * W * H
+    output: N * 1 * W * H
+    '''</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">p_model</span><span class="p">,</span> <span class="bp">self</span><span class="p">).</span><span class="n">__init__</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+        <span class="n">n</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="n">h</span> <span class="o">=</span> <span class="n">x</span><span class="p">.</span><span class="n">size</span><span class="p">()</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">x</span><span class="p">.</span><span class="n">view</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">w</span> <span class="o">*</span> <span class="n">h</span><span class="p">).</span><span class="n">permute</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="n">pooled</span> <span class="o">=</span> <span class="n">F</span><span class="p">.</span><span class="n">avg_pool1d</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">pooled</span><span class="p">.</span><span class="n">view</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="n">h</span><span class="p">)</span>
+
+<span class="n">main_model</span> <span class="o">=</span> <span class="n">f_model</span><span class="p">(</span><span class="n">model_path</span><span class="o">=</span><span class="n">DUMPED_MODEL</span><span class="p">).</span><span class="n">cuda</span><span class="p">()</span>
+<span class="n">color_model</span> <span class="o">=</span> <span class="n">c_model</span><span class="p">().</span><span class="n">cuda</span><span class="p">()</span>
+<span class="n">pooling_model</span> <span class="o">=</span> <span class="n">p_model</span><span class="p">().</span><span class="n">cuda</span><span class="p">()</span>
+<span class="n">extractor</span> <span class="o">=</span> <span class="n">FeatureExtractor</span><span class="p">(</span><span class="n">main_model</span><span class="p">,</span> <span class="n">color_model</span><span class="p">,</span> <span class="n">pooling_model</span><span class="p">)</span>
+
+<span class="n">all_loader</span> <span class="o">=</span> <span class="n">torch</span><span class="p">.</span><span class="n">utils</span><span class="p">.</span><span class="n">data</span><span class="p">.</span><span class="n">DataLoader</span><span class="p">(</span>
+        <span class="n">Fashion_attr_prediction</span><span class="p">(</span><span class="nb">type</span><span class="o">=</span><span class="s">"all"</span><span class="p">,</span> <span class="n">transform</span><span class="o">=</span><span class="n">data_transform_test</span><span class="p">),</span>
+        <span class="n">batch_size</span><span class="o">=</span><span class="n">EXTRACT_BATCH_SIZE</span><span class="p">,</span> <span class="n">num_workers</span><span class="o">=</span><span class="n">NUM_WORKERS</span><span class="p">,</span> <span class="n">pin_memory</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">dump_dataset</span><span class="p">(</span><span class="n">loader</span><span class="p">,</span> <span class="n">deep_feats</span><span class="p">,</span> <span class="n">color_feats</span><span class="p">,</span> <span class="n">labels</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">batch_idx</span><span class="p">,</span> <span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">data_path</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">loader</span><span class="p">):</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="n">Variable</span><span class="p">(</span><span class="n">data</span><span class="p">).</span><span class="n">cuda</span><span class="p">()</span>
+        <span class="n">deep_feat</span><span class="p">,</span> <span class="n">color_feat</span> <span class="o">=</span> <span class="n">extractor</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">data_path</span><span class="p">)):</span>
+            <span class="n">path</span> <span class="o">=</span> <span class="n">data_path</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+            <span class="n">feature_n</span> <span class="o">=</span> <span class="n">deep_feat</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">squeeze</span><span class="p">()</span>
+            <span class="n">color_feature_n</span> <span class="o">=</span> <span class="n">color_feat</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+            <span class="c1"># dump_feature(feature, path)
+</span>
+            <span class="n">deep_feats</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">feature_n</span><span class="p">)</span>
+            <span class="n">color_feats</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">color_feature_n</span><span class="p">)</span>
+            <span class="n">labels</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">batch_idx</span> <span class="o">%</span> <span class="n">LOG_INTERVAL</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">print</span><span class="p">(</span><span class="s">"{} / {}"</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">batch_idx</span> <span class="o">*</span> <span class="n">EXTRACT_BATCH_SIZE</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">loader</span><span class="p">.</span><span class="n">dataset</span><span class="p">)))</span>
+    
+        <span class="n">feat_all</span> <span class="o">=</span> <span class="s">'/output/all_feat_pca.npy'</span>
+        <span class="n">color_feat_all</span> <span class="o">=</span> <span class="s">'/output/all_color_feat.npy'</span>
+        <span class="n">feat_list</span> <span class="o">=</span> <span class="s">'/output/all_feat.list'</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">feat_list</span><span class="p">,</span> <span class="s">"w"</span><span class="p">)</span> <span class="k">as</span> <span class="n">fw</span><span class="p">:</span>
+            <span class="n">fw</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="s">"</span><span class="se">\n</span><span class="s">"</span><span class="p">.</span><span class="n">join</span><span class="p">(</span><span class="n">labels</span><span class="p">))</span>
+        <span class="n">np</span><span class="p">.</span><span class="n">save</span><span class="p">(</span><span class="n">feat_all</span><span class="p">,</span> <span class="n">np</span><span class="p">.</span><span class="n">vstack</span><span class="p">(</span><span class="n">deep_feats_reduced</span><span class="p">))</span>
+        <span class="n">np</span><span class="p">.</span><span class="n">save</span><span class="p">(</span><span class="n">color_feat_all</span><span class="p">,</span> <span class="n">np</span><span class="p">.</span><span class="n">vstack</span><span class="p">(</span><span class="n">color_feats</span><span class="p">))</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">"Dumped to all_feat.npy, all_color_feat.npy and all_feat.list."</span><span class="p">)</span>  
+
+<span class="n">deep_feats</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">color_feats</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">labels</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">dump_dataset</span><span class="p">(</span><span class="n">all_loader</span><span class="p">,</span> <span class="n">deep_feats</span><span class="p">,</span> <span class="n">color_feats</span><span class="p">,</span> <span class="n">labels</span><span class="p">)</span></code></pre></figure>
+ 
+</p>
+</details>
+
+<p>So now we have two types of features, one being the 512-dim deep features and 10*3-dim color features. We can play around with the similarity score by customizing the weightage to these two components.</p>
+
+<p>As follows are some of the examples with various weights.</p>
+
+<h3 id="libraries">Libraries</h3>
+<p>There are <a href="https://skymind.ai/wiki/comparison-frameworks-dl4j-tensorflow-pytorch">various deep learning frameworks</a> that can achieve the same task. PyTorch is easier for me to pick up as it is similar to Python NumPy in the way that it manages computations, while TensorFlow appears more complicated to me for its similarity to C++ (which I have little experience in). However it is still a bit of a challege to write the training codes and to visualize the training progress in PyTorch.</p>
+
+<p>I came across FastAi which is a fantastic wrapper sitting on top of PyTorch that simplifies the code dramatically. It also provides lots of function that makes model fine-tuning so much easier. Here is a <a href="https://github.com/yubin627/ga_projects/blob/master/Capstone_Project/codes/fasti_ai.ipynb">notebook</a> where I attempted a simple trial of ResNet-34 and ResNet-50 using the same dataset on FastAi. Love to play with it more!</p>
+
+<h2 id="future-work">Future Work</h2>
+<ul>
+  <li>Explore crop detector to enable input from external source without bbox information.</li>
+  <li>Expand the application of the model to other image dataset to build use cases that answer real-world problems. I have wanted to join the <a href="https://www.meetup.com/DataKind-SG/events/261014834/?_xtd=gqFypzUzMTY4NDihcKZpcGhvbmU&amp;from=ref">volunteer project</a> in DataKind to identify water points around the globe. Comparing to the ‘ideal’ DeepFashion dataset, this would require much more efforts in the data preprocessing involving data cleaning, labeling etc.</li>
+</ul>]]></content><author><name>yubin</name></author><category term="project" /><category term="CNN, deep learning, pytorch" /><summary type="html"><![CDATA[An attempt on image recognition with transfer learning]]></summary></entry><entry><title type="html">Subreddit Classification with API and NLP</title><link href="http://localhost:4000/Subreddit-Classification-with-NLP/" rel="alternate" type="text/html" title="Subreddit Classification with API and NLP" /><published>2019-07-15T10:10:00+08:00</published><updated>2019-07-15T10:10:00+08:00</updated><id>http://localhost:4000/Subreddit-Classification-with-NLP</id><content type="html" xml:base="http://localhost:4000/Subreddit-Classification-with-NLP/"><![CDATA[<p>Please see the <a href="https://github.com/yubin627/ga_projects/tree/master/Project_3">codes</a></p>
+
+<hr />
+
+<h3 id="problem-statement">Problem Statement</h3>
+
+<p>Use NLP to train a classifier to tell which of the two selected subreddits a given post should come from.</p>
+
+<h3 id="executive-summary">Executive Summary</h3>
+
+<p>As a diehard fan of Harry Potter series, the characters and the events in the books/movies are stored in my brain in chronological order. I could easily tell which era / which title of the book the stories belong to. However it might not be so easy for a casual fan of the Harry Potter film series or its spinoff, Fantastic Beasts and Where to Find Them. Also, it is natural to find a lot in common between the two series as there are a couple of characters that appear in both series, and of course topics could be a mix of the two since the author/film crew are (almost) the same. Therefore it would be quite normal to see posts wrongly created in the other subreddit.</p>
+
+<p>This project aims to propose a classification model that would be able to help aggregate the posts more accurately based on the title and the body text of the post. To achieve this, I selected and evaluated a few classification models using Natural Language Processing (NLP) tools.</p>
+
+<p>The subreddits chosen to compare are:</p>
+
+<ul>
+  <li><a href="https://www.reddit.com/r/harrypotter/"><strong>r/harrypotter</strong></a></li>
+  <li><a href="https://www.reddit.com/r/FantasticBeasts/"><strong>r/FantasticBeasts</strong></a></li>
+</ul>]]></content><author><name>yubin</name></author><category term="project" /><category term="NLP" /><summary type="html"><![CDATA[Please see the codes]]></summary></entry><entry><title type="html">Regression and Classification with Housing Data</title><link href="http://localhost:4000/Regression-and-Classification-with-Housing-Data/" rel="alternate" type="text/html" title="Regression and Classification with Housing Data" /><published>2019-07-01T22:10:00+08:00</published><updated>2019-07-01T22:10:00+08:00</updated><id>http://localhost:4000/Regression-and-Classification-with-Housing-Data</id><content type="html" xml:base="http://localhost:4000/Regression-and-Classification-with-Housing-Data/"><![CDATA[<p>Please see the <a href="https://github.com/yubin627/ga_projects/tree/master/Project_2">codes</a></p>
+
+<hr />
+
+<h3 id="problem-statement">Problem Statement</h3>
+
+<p>Given a set of information about a house, we want to be able to predict its expected price. Ideally, using the predictors, we can optimise the selling price of the house.
+The dataset comes from Kaggle competition on <a href="https://www.kaggle.com/c/house-prices-advanced-regression-techniques">House Prices: Advanced Regression Techniques</a></p>
+
+<h3 id="summary">Summary</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Model</th>
+      <th>R2 (train)</th>
+      <th>R2 (test)</th>
+      <th>RMSE (USD)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">OLS (no regularization)</td>
+      <td>0.944</td>
+      <td>-4.17e+20</td>
+      <td>8.48X10^9</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Ridge (L2 penalty)</td>
+      <td>0.941</td>
+      <td>0.913</td>
+      <td>0.120</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Lasso (L1 penalty)</td>
+      <td>0.929</td>
+      <td>0.906</td>
+      <td>0.122</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Elastic Net</td>
+      <td>0.935</td>
+      <td>0.911</td>
+      <td>0.124</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>In general, with regularization and hyperparameter tuning, we are able to achieve an RMSE of about ~0.12 USD for our model. All the three models (Ridge, Lasso and Elastic Net) are consistent in identifying the top correlated features, namely: how well the property can function, the ground living area, how recent the property was built and the overall material and finish quality.</p>
+
+<p>After reviewing all the models evaluated so far, I will proceed with the Ridge and Elastic Net models for submission of the kaggle challenge.</p>
+
+<h3 id="caveat">Caveat</h3>
+
+<ul>
+  <li>Although the RMSE may look reasonably good, the model has its own limitation. It might not be able to produce a good fit for housing properties of rare type such as those with pools or those in agricultural zones. Recall that we have removed a few features due to limited samples in certain categories, e.g. pool_area was removed as only less than 4% of the properties have pools.</li>
+  <li>The model still has room for further improvement if domain expert could step in during the feature selection/engineering stage. For example, there are 28 categories in the ‘neighorhood’ feature. It could certainly be refined if we know that if there are ways to group the neighborhood to reduce complexity of the model.</li>
+</ul>]]></content><author><name>yubin</name></author><category term="project" /><category term="Regression Model" /><summary type="html"><![CDATA[Please see the codes]]></summary></entry></feed>
