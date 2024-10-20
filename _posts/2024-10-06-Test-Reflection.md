@@ -1,56 +1,53 @@
 ---
-title: "Just a test"
+title: "聊天,看剧和看书"
 layout: post
-date: 2024-10-06 12:53
-tag: reflection
+date: 2024-10-20 12:53
+tag: Diary
 headerImage: false
 projects: false
 hidden: false
-description: Test
+description: 生活碎片
 category: blog
 author: yubin
 ---
 
-It has been almost 10 years after I graduated from university, so I think it's a good time to take a look-back and reflect what I have seen, experienced and accomplished. 
+找回了自己的页面，正好感觉有很多思绪只有写出来才能让心情平和。
+想到哪里写到哪里
 
 ---
 
-## After Graduation
+## 财报究竟有用吗
 
-Fresh out of school I had problems finding the right job. Personally I think the global economic downturn played a big part back then, when the subprime mortgage crisis spread to Singapore and there were not many job openings in the market. As a result I landed on a job not related to my degree - it was a role in financial printing sector. On that job I was managing a bunch of clients and attended to their printing needs everyday, specifically on the legal document requirements. Though it was not a very technical role, I am happy that I got a side-view of the finance industry and learnt how to put myself in others' shoes and how to manage multiple projects in parallel without missing any deadlines or raising any conflicts. 
+前几天和朋友发牢骚的时候聊到非常讨厌现在的工作，因为已经有一半以上都变成了做报表，英文来说就是dashboard和powerpoint。从中我找不到任何成就感，我给的原因是我觉得这些报表屁用没有。朋友不解，也是想帮我深入地分析一下职业困扰的根源在哪里。于是我打了个比方--公司必须要出的年报（annual report）也是一样的性质。投资者需要看年报，它起到的作用是如实地具体地透明地合规地通告财务状况，却完全做不到帮助公司成长的回馈作用。公司的战略成长一定是从业务本身出发，结合人类需求，服务社会，基于现有的技术和资源改进和开发更有市场的产品，起到关键作用的是经营者的愿景和敏锐度。所以从公司自身出发，年报实在提不上有什么促进成长的效应。当然，存在的必定是合理的。它是一个结果的描述，或者说它就是个无精蛋，无法直接变出小鸡。记得小时候家里就有只差点要被宰的母鸡，因为可以一直下蛋所以免于上餐桌的命运。公司也一样，想要上市想要投资人的钱，也是要有这么个机械下蛋的动作。
 
-After a short stint there, I decided to move on and started looking for engineering jobs again as I was not satisfied with my personal growth in the 'hard' skillset. (By nature I am still a person who likes to learn, talk and build stuff instead of relaying information from one party to another.)
+回到我自己个人，我所追求的工作性质，或者更广义上说我想做的事，是创造类的，是可以“孵出小鸡的”。在数据科学/数据分析的语境，也就是prescriptive还是descriptive的区别。Descriptive很重要，劳心劳力，但是和年报一样，这个重要性要看从谁的角度来说。做出来的报表对于management decision很重要，但对于真正做分析的人来说，并没有什么真正可以引以为傲的实绩。这一点在销售领域尤其如此。可以说，数分人就是打杂的牛马。表面的数据能产生的行动无法真正解决客户痛点。而且，这个工种很大一部分应该很快就能被AI技术给替代。
 
-## Engineering
-
-I then spent 6 years in semiconductor industry dealing with manufacturing process of microchips. I love my work there where I applied statistical analysis to troubleshoot / optimize the manufacturing process and equipments so as to maximize product yield and quality. The tools I used back then were more 'proprietary' and a bit different from the newest applications / libraries widely recognized these days; but the key concepts and frameworks are essentially built on the same thing. I used JMP as well as in-house software to design experiments and analyse results, used SQL to extract lots (a lot is a batch of <=25 wafers in the manufacturing line) history and also used Tableau to report results to leadership.
-
-Day by day I realized that the part that I enjoyed the most (and also the core) of my job is turning data into a story that can be easily understood by my audience, be it the manufacturing team, the planning team or my best friends - engineering team. How to use the least words to tell a concise and effective story that drives actions is the skill that I'd like to continue practising in the rest of my professional life.
-
-At the same time, I saw opportunities blooming in the data science field which was also the driving force of the prospering semiconductor market. Large computing power became indispensable to almost all companies (or even at individual level) to be able to catch up with the growing speed of others. Rather than producing the 'crops' to power up the intelligence of other companies / individuals, I found myself also inclined to step into that field - what can I do to unleash the power of data to make an impact to the organization?
-
-I believe this is also definitely something that semiconductor industry is moving towards - smart manufacturing, if well designed and implemented at large scale, could win company great advantages in producing high quality products within shorter cycle time. However this job is easier said than done - particularly in semiconductor business. First among all the complex reasons is the IP issue of manufacturing process and equipments which involve multiple up/down-stream stakeholders; and no one plays a small role here. This has decreed that the data must be managed by a centralized group of authorized and highly skilled personnel; in consequence, data democritization and knowledge sharing is probably something that's never going to be rolled out to the wider engineering team. There is definitely entry barrier to learn data science skills on the job (but trained professionals are very welcomed I believe).
-
-## Digital Advertising
-
-I turned my eyes elsewhere - it's natural that internet company should be my next choice. Why? These companies are built upon the principles of openness and forward thinking so it matches with my goal of keeping updating my skillset in data science. Digital advertising, in particular, has caught my attention. I have read a bit on this and was amazed by the ecosystem and the mechanism of online ads buying/selling. It is really fascinating how fast this business is growing with ever-evolving technologies backing up every piece of it. I'm glad that I managed to land on an analytics role in a leading agency in this field, where I garnered skills in data ETL (extract, tranform and load) flow, experienced cloud computing on GCP (Google Cloud Platform) and AWS (Amazon Web Services) and also got hands-on in writing Python and R scripts to answer measurement questions. I enjoyed this learning process very much, as I was able to pick up new tools to solve business problems that see results quickly. 
-
-For example, I applied A/B testing in creative studies to explore various messaging approaches and was able to find that seasonal messaging would be much more effective in raising search interest than a general one. This saved efforts from clients in generating and spending on the less effective creatives. I also managed to prove statistically the value of the digital portion of a campaign by applying the [MarketingMatching](https://rdrr.io/cran/MarketMatching/man/MarketMatching.html) R package. This helped convince the clients in scaling up the digital spend in the future campaigns.
-
-This way I've got to deal with data generated by humans and come up with insights about user behaviors that can later drive business decisions. I love this process.
-
-There is only one reason for me to leave my last job - I want to turn data into products that can bring greater benefits to the organization.  To be 100% honest I don't think agency environment could provide much playground for practising  new technologies to solve problems critical to the core business - to give an example, we can't answer the basic question on how much we should split the spend among offline / online marketing channels, simply because we don't have the holistic perspective of the business and don't own the data. 
+我自己坚信数据科学在公司内的位置应该是具有导向性的，而且我也具备多数的hard skills，所以要坚持找到更适合自己的位置。现在这个工作的性质已经与五年前应聘时候给我画的饼发生了太多的偏差。因为组织需要，因为”我会”，就习惯性地让我承担这些任务，越来越剥夺我去做能有真正产出的工作的时间，越来越让我意识到我没有在我该在的地方。我需要把我的目标明确，然后查漏补缺，不急不躁，脚踏实地地向目标靠近。
 
 
-## Still on the way
 
-So this year I gave myself a career break for enrichment academically, while also on the lookout for opportunities that can productize insights from data. 
+## 披荆斩棘的哥哥
 
-At the beginning of this year I was closing off the courses that I signed up before (but never finished) with DataCamp, Udacity and edx. Those courses definitely gave me great tips in how to use the essential toolbox of a data scientist. I'd strongly recommend whoever interested taking up [DataCamp's SQL course](https://www.datacamp.com/courses/intermediate-sql), [Udacity's Data Analyst Nanodegree](https://www.udacity.com/course/data-analyst-nanodegree--nd002) and [coursera's Data Visualization](https://www.coursera.org/learn/analytics-tableau/home/welcome) course as an introduction to analytics. Thereafter, I joined General Assembly's Data Science Immersive bootcamp to gain a structured understanding of the machine learning algorithms and to get familiarized with the deep learning frameworks. Now I have graduated from the course and the biggest three takeaways I had are: 1) formed a habit of learning something new everyday; 2) knew a good bunch of friends with whom I can exchange interesting topics; 3) got hands-on practice on a few projects applying newly learned skills including Regression Modeling, NLP, CNN etc.
+可能是第一次看这个节目了有一个小时左右吧。貌似是倒数第二期了。节目真得做得很好，没想到做了这么多季了还能做出花儿。
+
+说几个印象比较深的几个点。
+
+- 摄像的镜头给得比较均匀，能够感受到有些成员说的话可能不多，但是基本每个人的镜头隔几分钟都会带到。
+- 幕后做了非常多的准备，做到了全面且细致，不是表面功夫。中秋猜灯谜使用emoji新鲜又不掉书袋，让大家动脑的同时能享受家乡美食，灯谜巧妙地引出每个人的愿望，看得出愿望必定是提前搜集并且有分组打好招呼准备节目，因为节目都很有效果，并且顺序也很周到地以主题曲合唱为结束。统筹策划执行一定是业界标杆，即便我不是干这行的都能想象得到这有多难。
+- 再回到摄影，后面的运动会，能看到硬件也是一顶一，看得到遍布的gopro和轨道，强大的慢动作捕捉。原来还觉得奇怪，运动会这种已经偏离节目主旨的项目为何要放在正片而不是衍生节目，看到这个制作我就能理解了。主旨应该已经发生了改变。
+- 芒果的新生代主持人真的在成长。记得小学的时候快乐大本营招新，那都是10几年前了，从那个时候起我就非常悲观地觉得湖南台再也不会有好主持人了，而且这个观点一直到最近都没有变过，不过好在台柱子一直都在，光芒能盖住那些混日子的
+
+
+## 団地のふたり
+
+マジで面白い！
+
+
+## Thinking, Fast and Slow
+
+
 
 ---
 
-This has come to an end of my reflection.
-Learning never ends and I am still just scratching the surface. 
-Let's KEEP THE GAME ON!
+明天又是周一了。即便需要mental efforts也努力一下吧，会让我的System 1好点。
 
